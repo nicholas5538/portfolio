@@ -1,19 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import Hamburger from './Hamburger';
+import DropdownMenu from './DropdownMenu';
 import { IconMoodSmileBeam } from '@tabler/icons-react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 const MainNavigation = () => {
   const [isDarkMode, setDarkMode] = useState<boolean>(false);
-  const [isMenuClicked, setMenuClicked] = useState<boolean>(false);
-  const clickHandler = (): void => setMenuClicked((prevState) => !prevState);
 
   return (
-    <nav className="w-screen">
-      <div className="flex flex-row justify-between items-center mx-auto py-8 w-11/12">
-        <Hamburger isMenuClicked={isMenuClicked} onClick={clickHandler} />
+    <nav className="relative w-screen">
+      <div className="relative flex flex-row justify-between items-center mx-auto py-8 w-11/12">
+        <DropdownMenu />
         <div className="flex flex-row items-center gap-x-2">
           <h1 className="font-mont text-white-300 font-bold tracking-widest">
             NICHOLAS

@@ -3,10 +3,14 @@ import { LazyMotion, domAnimation, m } from 'framer-motion';
 
 type HamburgerProps = {
   isMenuClicked: boolean;
-  onClick: () => void;
+  setMenuClicked: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Hamburger = ({ isMenuClicked, onClick }: HamburgerProps) => {
+const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
+  const clickHandler = () => {
+    setMenuClicked((prevState) => !prevState);
+  };
+
   const variant = isMenuClicked ? 'click' : 'unclick';
   const variantType = {
     top: {
@@ -41,7 +45,7 @@ const Hamburger = ({ isMenuClicked, onClick }: HamburgerProps) => {
   const transitionType = { type: 'spring', duration: 0.4, bounce: 0.5 };
 
   return (
-    <div className="cursor-pointer h-full" onClick={onClick}>
+    <div className="cursor-pointer h-full" onClick={clickHandler}>
       <LazyMotion features={domAnimation}>
         <m.div
           animate={variant}
