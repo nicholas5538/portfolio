@@ -2,8 +2,10 @@
 
 module.exports = {
   content: [
+    './app/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    '!./node_modules',
   ],
   theme: {
     fontFamily: {
@@ -24,7 +26,8 @@ module.exports = {
       'light-blue': 'A9F0FF',
       'dark-blue': '#0C2E4E',
       blue: '#00D4FF',
-      'blue-gradient': 'linear-gradient(180deg, #000046 0%, #1CB5E0 100%)',
+      'blue-gradient-1': '#000046',
+      'blue-gradient-2': '#1CB5E0',
       red: '#FF2B00',
       orange: '#EB7F13',
       'orange-gradient': 'linear-gradient(180deg, #F2A65A 0%, #772F1A 100%)',

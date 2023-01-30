@@ -1,8 +1,10 @@
 import { Montserrat } from '@next/font/google';
 import { childrenNode } from '@/constants/typeInterface';
+import './globals.css';
 
 const monserrat = Montserrat({
   subsets: ['latin'],
+  weight: 'variable',
   style: ['normal', 'italic'],
   variable: '--font-mont',
 });
