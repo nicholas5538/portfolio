@@ -6,7 +6,7 @@ const DropdownMenu = () => {
   const [isMenuClicked, setMenuClicked] = useState<boolean>(false);
 
   return (
-    <>
+    <div className="lg:hidden">
       <Hamburger
         isMenuClicked={isMenuClicked}
         setMenuClicked={setMenuClicked}
@@ -15,7 +15,7 @@ const DropdownMenu = () => {
         isMenuClicked={isMenuClicked}
         setMenuClicked={setMenuClicked}
       />
-    </>
+    </div>
   );
 };
 

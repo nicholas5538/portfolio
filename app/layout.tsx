@@ -12,7 +12,6 @@ const monserrat = Montserrat({
 export default function RootLayout({ children }: childrenNode) {
   return (
     <html className={monserrat.className}>
-      <head />
       <body>{children}</body>
     </html>
   );

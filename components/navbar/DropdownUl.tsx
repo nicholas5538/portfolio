@@ -2,14 +2,7 @@ import React, { useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { setMenuType } from '@/constants/typeInterface';
 import { useOutsideAlerter } from '@/hooks/useOutsideAlerter';
-
-const listElements = [
-  'About Me',
-  'Skills',
-  'Experience',
-  'Projects',
-  'Contact',
-];
+import { listElements } from '@/constants/global';
 
 type menuType = {
   isMenuClicked: boolean;
@@ -44,7 +37,7 @@ const DropdownUl = ({
       {isMenuClicked && (
         <motion.div
           ref={dropdownRef}
-          className="absolute top-20 left-0 w-full"
+          className="absolute top-20 left-0 w-full md:max-width-sm"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}

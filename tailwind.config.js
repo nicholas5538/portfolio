@@ -2,7 +2,7 @@
 
 module.exports = {
   content: [
-    './app/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     '!./node_modules',
@@ -31,6 +31,14 @@ module.exports = {
       red: '#FF2B00',
       orange: '#EB7F13',
       'orange-gradient': 'linear-gradient(180deg, #F2A65A 0%, #772F1A 100%)',
+    },
+    screens: {
+      sm: '500px',
+      md: '768px',
+      lg: '992px',
+      xl: '1280px',
+      '2xl': '1536px',
+      '3xl': '2000px',
     },
     extend: {
       boxShadow: {
