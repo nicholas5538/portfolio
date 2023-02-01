@@ -10,12 +10,12 @@ const MainNavigation = () => {
   const [isDarkMode, setDarkMode] = useState<boolean>(false);
 
   return (
-    <nav className="relative w-screen">
-      <div className="relative flex flex-row justify-between items-center mx-auto py-8 w-11/12 max-w-7xl">
+    <nav className="mx-auto w-11/12 max-w-7xl mb-6">
+      <div className="relative flex flex-row justify-between items-center py-8">
         <DropdownMenu />
         <NavbarLinks />
         <div className="flex flex-row items-center gap-x-2 lg:order-1">
-          <h1 className="navbar-text lg:text-xl">NICHOLAS</h1>
+          <h1 className="navbar-text">NICHOLAS</h1>
           <IconMoodSmileBeam
             size={24}
             color="#F8F8F8"

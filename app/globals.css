@@ -5,13 +5,13 @@
 @layer base {
   root,
   body {
-    @apply m-0 p-0 box-border overflow-x-hidden;
+    @apply m-0 p-0 box-border overflow-x-hidden bg-white-300;
   }
 }
 
 @layer components {
   .navbar-text {
-    @apply font-mont text-white-300 font-bold tracking-widest;
+    @apply font-mont text-white-300 font-bold tracking-widest lg:text-xl 2xl:text-[1.75rem];
   }
 
   .dropdown-link {
