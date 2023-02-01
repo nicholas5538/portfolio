@@ -28,6 +28,7 @@ const MainNavigation = () => {
           sunColor={'#F8F8F8'}
           moonColor={'#EB7F13'}
           className="lg:order-3"
+          data-testid="darkModeSwitch"
         />
       </div>
       <div className="absolute -z-10 -top-[28rem] -left-20 -rotate-12 bg-gradient-to-b from-blue-gradient-1 to-blue-gradient-2 w-[4000px] h-[20rem] md:-left-40 md:h-[31.25rem] xl:h-[37.5rem] 2xl:h-[43.75rem] 3xl:h-[50rem]"></div>

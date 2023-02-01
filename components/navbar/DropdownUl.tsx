@@ -42,6 +42,7 @@ const DropdownUl = ({
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}
           transition={{ duration: 0.3 }}
+          data-testid="dropdown-ul"
         >
           <ul className="bg-white-300 rounded-xl shadow-dropdown">
             {liElements}

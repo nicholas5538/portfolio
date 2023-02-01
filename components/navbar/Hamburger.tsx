@@ -45,7 +45,11 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   const transitionType = { type: 'spring', duration: 0.4, bounce: 0.5 };
 
   return (
-    <div className="cursor-pointer h-full" onClick={clickHandler}>
+    <div
+      className="cursor-pointer h-full"
+      onClick={clickHandler}
+      data-testid="hamburger-btn"
+    >
       <LazyMotion features={domAnimation}>
         <m.div
           animate={variant}
