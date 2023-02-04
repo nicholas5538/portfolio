@@ -1,11 +1,22 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import profilePic from '../../public/profile-light.webp';
 import HeroButtons from './HeroButtons';
+import { motion } from 'framer-motion';
+import { useHeroAnimation } from '@/hooks/useHeroAnimation';
 
 const Hero = () => {
+  const { controls, heroRef } = useHeroAnimation();
+
   return (
-    <section className="heroSection">
+    <motion.div
+      animate={controls}
+      viewport={{ once: true }}
+      ref={heroRef}
+      className="heroSection"
+    >
       <Image src={profilePic} alt="Profile Picture" className="profilePic" />
       <h1 className="mb-4 md:mb-8 md:text-4xl md:col-span-2 md:row-start-1 md:row-end-2 xl:text-5xl">
         <span className="waving">👋</span>
@@ -26,7 +37,7 @@ const Hero = () => {
         </h3>
         <HeroButtons />
       </div>
-    </section>
+    </motion.div>
   );
 };
 
