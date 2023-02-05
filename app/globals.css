@@ -5,7 +5,7 @@
 @layer base {
   root,
   body {
-    @apply m-0 p-0 box-border overflow-x-hidden bg-white-300;
+    @apply m-0 p-0 box-border overflow-x-hidden overflow-y-auto bg-white-300;
   }
 
   h1 {
@@ -27,7 +27,7 @@
   }
 
   .dark-blue-gradient {
-    @apply absolute -z-10 -top-56 -left-16 -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[120%] xl:h-[120%] 2xl:-left-20 2xl:h-[140%];
+    @apply absolute -z-10 -top-56 -left-16 -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[125%] xl:h-[130%] 2xl:-left-20 2xl:h-[140%];
   }
 
   .navbar-text {
@@ -55,10 +55,10 @@
   }
 
   .aboutmeText {
-    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg lg:col-span-1 xl:text-2xl;
+    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg xl:text-2xl;
   }
 
   .aboutmeAnimation {
-    @apply absolute -top-16 -right-12 w-44 h-44 md:static md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-6 md:place-self-center md:w-72 md:h-72 lg:col-start-2 lg:w-[30rem] lg:h-[30rem];
+    @apply absolute -top-16 -right-12 w-44 h-44 md:static md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-6 md:place-self-center md:w-72 md:h-72 lg:col-start-3 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
   }
 }
