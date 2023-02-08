@@ -33,7 +33,7 @@ const containerAnimation: Tanimation = {
 
 const AboutMe = () => {
   return (
-    <section className="relative z-0 bg-dark-blue mb-28 md:mb-40 xl:mb-48 2xl:mb-60">
+    <section className="relative z-0 bg-dark-blue mb-36 md:mb-48 xl:mb-56 2xl:mb-68">
       <Animation animation={containerAnimation} className="aboutmeContainer">
         <m.div
           variants={childAnimation}
