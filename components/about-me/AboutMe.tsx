@@ -26,7 +26,7 @@ const containerAnimation: Tanimation = {
       type: 'spring',
       duration: 1,
       bounce: 0.4,
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
