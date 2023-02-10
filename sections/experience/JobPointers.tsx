@@ -1,12 +1,13 @@
 import { experiences } from './experienceDesc';
 import { m } from 'framer-motion';
+import { Tvariants } from '@/constants/global';
 
-const JobPointers = ({ variants }: any) => {
+const JobPointers = ({ childAnimation }: Tvariants) => {
   const createExperienceElement = experiences.map((experience, index) => {
     return (
       <m.div
         key={index}
-        variants={variants}
+        variants={childAnimation}
         className={`mb-5 md:col-span-2 ${
           index === 0
             ? 'md:row-start-2 md:row-end-4'

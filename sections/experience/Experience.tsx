@@ -47,7 +47,7 @@ const Experience = () => {
         >
           💼 Experience
         </m.h2>
-        <JobPointers variants={childAnimation} />
+        <JobPointers childAnimation={childAnimation} />
         <m.aside
           variants={lottieAnimation}
           className="aboutmeAnimation md:row-end-5"
