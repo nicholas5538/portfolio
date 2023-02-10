@@ -4,7 +4,7 @@ import React, { lazy } from 'react';
 import AboutMeLight from '../../public/animations/aboutme-light.json';
 import { m, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
-import Animation from '../Animation';
+import Animation from '../../components/Animation';
 
 const Lottie = lazy(() => import('lottie-react'));
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import ScrollToTop from '@/components/ScrollToTop';
-import MainNavigation from '@/components/navbar/MainNavigation';
-import Hero from '@/components/hero/Hero';
-import AboutMe from '@/components/about-me/AboutMe';
-import Skills from '@/components/skills/Skills';
-import Experience from '@/components/experience/Experience';
+import MainNavigation from '@/sections/navbar/MainNavigation';
+import Hero from '@/sections/hero/Hero';
+import AboutMe from '@/sections/about-me/AboutMe';
+import Skills from '@/sections/skills/Skills';
+import Experience from '@/sections/experience/Experience';
 
 const Page = () => {
   return (

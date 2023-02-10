@@ -9,7 +9,7 @@ import {
 } from './common';
 import SkillCategory from './SkillCategory';
 import SkillsLight from '../../public/animations/skills-light.json';
-import Animation from '../Animation';
+import Animation from '../../components/Animation';
 import { m, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
 
