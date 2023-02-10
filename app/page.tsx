@@ -4,6 +4,7 @@ import MainNavigation from '@/components/navbar/MainNavigation';
 import Hero from '@/components/hero/Hero';
 import AboutMe from '@/components/about-me/AboutMe';
 import Skills from '@/components/skills/Skills';
+import Experience from '@/components/experience/Experience';
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <AboutMe />
       <ScrollToTop />
       <Skills />
+      <Experience />
     </div>
   );
 };
