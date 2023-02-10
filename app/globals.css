@@ -59,7 +59,7 @@
   }
 
   .aboutmeContainer {
-    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-48 lg:mb-52 xl:mb-60 2xl:mb-[280px];
+    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 xl:mb-60 2xl:mb-[280px];
   }
 
   .aboutmeHeading {
