@@ -28,10 +28,7 @@ const HeroButtons = () => {
   return (
     <div className="flex flex-row items-center justify-start gap-x-6">
       {anchorElements}
-      <button
-        type="button"
-        className="rounded-2xl bg-aqua px-4 py-2 transition-colors duration-300 ease-out hover:bg-dark-aqua dark:bg-light-orange dark:hover:bg-orange-red"
-      >
+      <button type="button" className="redirect-button">
         <a
           href="#"
           rel="noreferrer"
