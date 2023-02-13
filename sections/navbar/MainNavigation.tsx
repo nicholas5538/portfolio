@@ -74,7 +74,7 @@ const MainNavigation = () => {
             onChange={(checked: boolean) => setDarkMode(checked)}
             onClick={toggleThemeHandler}
             sunColor={'#F8F8F8'}
-            moonColor={'#EB7F13'}
+            moonColor={'#FFB26B'}
             data-testid="darkModeSwitch"
           />
         </motion.div>

@@ -19,12 +19,12 @@ const ProjectCard = ({
     iconList.map((icon, index) => (
       <div
         key={index}
-        className={`tooltip tooltip-info tooltip-top ${
+        className={`tooltip tooltip-top tooltip-info ${
           icon?.url ? 'cursor-pointer' : 'cursor-default'
         }`}
         data-tip={icon.tooltipText}
       >
-        {icon?.url ? (
+        {iconList === stack ? (
           <icon.Icon key={index} size={35} color="#343434" />
         ) : (
           <a href={icon.url} rel="noreferrer" target="_blank">
