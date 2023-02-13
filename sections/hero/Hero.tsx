@@ -70,7 +70,12 @@ const Hero = () => {
       >
         <h3 className="mb-4 md:mb-8 md:text-2xl xl:text-3xl">
           Currently working as a SWE Trainee @{' '}
-          <a href="https://www.foodpanda.com" rel="noreferrer" target="_blank">
+          <a
+            aria-label="foodpanda"
+            href="https://www.foodpanda.com"
+            rel="noreferrer"
+            target="_blank"
+          >
             foodpanda
           </a>
         </h3>

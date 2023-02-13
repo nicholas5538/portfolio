@@ -13,7 +13,7 @@ const HeroButtons = () => {
           className="tooltip tooltip-bottom tooltip-info ml-2 dark:tooltip-warning md:tooltip-top md:ml-0"
           data-tip={name}
         >
-          <a href={url} rel="noreferrer" target="_blank">
+          <a aria-label={name} href={url} rel="noreferrer" target="_blank">
             <Icon
               size={40}
               color={`${darkMode ? '#DEE2E6' : '#343434'}`}

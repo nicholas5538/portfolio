@@ -23,10 +23,11 @@ const JobPointers = ({ childAnimation }: Tvariants) => {
         <h4 className="mb-2 font-semibold text-white-400 dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
           @&nbsp;
           <a
-            className="text-blue"
+            aria-label={experience.company}
             href={experience.companyURL}
             rel="noreferrer"
             target="_blank"
+            className="text-blue"
           >
             {experience.company}
           </a>

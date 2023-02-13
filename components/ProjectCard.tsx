@@ -31,7 +31,12 @@ const ProjectCard = ({
         {iconList === stack ? (
           <icon.Icon key={index} size={35} color={iconColor} />
         ) : (
-          <a href={icon.url} rel="noreferrer" target="_blank">
+          <a
+            aria-label={icon.tooltipText}
+            href={icon.url}
+            rel="noreferrer"
+            target="_blank"
+          >
             <icon.Icon key={index} size={35} color={iconColor} />
           </a>
         )}
