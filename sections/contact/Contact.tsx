@@ -46,6 +46,7 @@ const Contact = () => {
         </h4>
         <button type="button" className="redirect-button w-1/2 max-w-[160px]">
           <a
+            aria-label="email"
             href="mailto:nicholas5538@gmail.com"
             className="h-full w-full text-base tracking-widest text-white-400 no-underline hover:no-underline dark:text-black-300 md:text-lg xl:text-xl"
           >
