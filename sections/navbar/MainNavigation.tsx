@@ -68,7 +68,7 @@ const MainNavigation = () => {
           />
         </motion.div>
         <div className="order-first lg:order-2">
-          <DropdownMenu scrollDirection={scrollDirection} />
+          <DropdownMenu />
           <NavbarLinks childAnimation={childAnimation} />
         </div>
         <motion.div

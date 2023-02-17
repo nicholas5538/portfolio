@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Hamburger from './Hamburger';
 import DropdownUl from './DropdownUl';
-import { TscrollDirection } from '@/constants/typeInterface';
 
-const DropdownMenu = ({ scrollDirection }: TscrollDirection) => {
+const DropdownMenu = () => {
   const [isMenuClicked, setMenuClicked] = useState<boolean>(false);
 
   return (
@@ -15,7 +14,6 @@ const DropdownMenu = ({ scrollDirection }: TscrollDirection) => {
       <DropdownUl
         isMenuClicked={isMenuClicked}
         setMenuClicked={setMenuClicked}
-        scrollDirection={scrollDirection}
       />
     </div>
   );
