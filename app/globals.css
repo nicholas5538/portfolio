@@ -43,7 +43,7 @@
   }
 
   .navbar-text {
-    @apply font-mont font-bold tracking-widest text-white-300 dark:text-white-400 lg:text-xl 2xl:text-[1.75rem];
+    @apply font-mont font-bold tracking-widest text-black-200 dark:text-white-400 lg:text-xl 2xl:text-[1.75rem];
   }
 
   .dropdown-link {
