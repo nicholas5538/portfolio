@@ -48,4 +48,3 @@ next-env.d.ts
 # firebase
 /.firebase
 /.firebaserc
-firebase.json
