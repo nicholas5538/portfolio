@@ -4093,6 +4093,8 @@ __metadata:
   dependenciesMeta:
     husky:
       optional: true
+    next@13.2.4:
+      unplugged: true
   languageName: unknown
   linkType: soft
 

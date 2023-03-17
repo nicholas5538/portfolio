@@ -57,5 +57,10 @@
   "engines": {
     "node": "18"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.0",
+  "dependenciesMeta": {
+    "next@13.2.4": {
+      "unplugged": true
+    }
+  }
 }
