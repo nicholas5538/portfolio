@@ -57,10 +57,10 @@ const ProjectCard = ({
       >
         <li
           className={clsx(
-            'grid grid-rows-1 rounded-lg px-5 py-4 shadow-project',
+            'grid grid-rows-1 rounded-lg px-5 py-4 shadow-project dark:shadow-project-dark',
             'transition-transform duration-300 ease-out hover:-translate-y-2',
             'md:grid-cols-12 md:grid-rows-6 md:items-center md:justify-items-center',
-            'md:rounded-none md:shadow-none md:transition-none md:hover:translate-y-0',
+            'md:rounded-none md:shadow-none md:transition-none md:hover:translate-y-0 dark:md:shadow-none',
             'lg:grid-rows-5 lg:gap-y-2'
           )}
         >
@@ -97,7 +97,7 @@ const ProjectCard = ({
           <aside
             className={clsx(
               'absolute left-0 top-0 -z-10 h-full max-h-[350px]',
-              'max-w-[600px] opacity-[8%] md:top-1/4 md:h-1/2 md:w-1/2',
+              'opacity-[8%] md:top-1/4 md:h-1/2 md:w-1/2 md:max-w-[600px]',
               'md:border-2 md:border-black-200 md:opacity-60 dark:md:opacity-30',
               'md:left-0 lg:top-[12.5%] lg:h-3/4 lg:w-1/2',
               {
@@ -109,8 +109,7 @@ const ProjectCard = ({
               src={image}
               alt={`Image of ${projectTitle}`}
               placeholder="blur"
-              fill
-              className="object-cover object-center"
+              className="h-full object-cover object-center"
             />
           </aside>
         </li>
