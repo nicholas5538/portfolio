@@ -57,39 +57,40 @@ const ProjectCard = ({
       >
         <li
           className={clsx(
-            'grid grid-rows-1 rounded-lg px-5 py-4 shadow-project transition-transform',
-            'duration-300 ease-out hover:-translate-y-2 md:grid-cols-12 md:grid-rows-5 ',
-            'md:items-center md:justify-items-center md:rounded-none md:shadow-none',
-            'md:transition-none md:hover:translate-y-0'
+            'grid grid-rows-1 rounded-lg px-5 py-4 shadow-project',
+            'transition-transform duration-300 ease-out hover:-translate-y-2',
+            'md:grid-cols-12 md:grid-rows-6 md:items-center md:justify-items-center',
+            'md:rounded-none md:shadow-none md:transition-none md:hover:translate-y-0',
+            'lg:grid-rows-5 lg:gap-y-2'
           )}
         >
           <h3
-            className={`white-sub-heading font-bold tracking-wide dark:text-[#FFA54E] md:row-start-1 md:row-end-2 md:mb-0 ${colPlacement}`}
+            className={`white-sub-heading select-none font-bold tracking-wide dark:text-[#FFA54E] md:row-start-1 md:row-end-2 md:mb-0 ${colPlacement}`}
           >
             {projectTitle}
           </h3>
           <p
-            className={`mb-2 text-sm transition-colors duration-300 ease-out dark:bg-none dark:text-white-100 md:row-start-2 md:row-end-4 md:bg-white-400 md:p-4 md:text-lg md:shadow-project dark:md:bg-black-500 dark:md:shadow-xl xl:text-xl ${colPlacement}`}
+            className={`mb-2 text-sm transition-colors duration-300 ease-out dark:bg-none dark:text-white-100 md:row-start-2 md:row-end-5 md:bg-white-400 md:p-4 md:text-lg md:shadow-project dark:md:bg-black-500 dark:md:shadow-xl lg:row-end-4 xl:text-xl ${colPlacement}`}
           >
             {projectDesc}
           </p>
           <div
-            className={`row-span-1 mb-2 md:row-start-4 md:row-end-5 ${colPlacement}`}
+            className={`row-span-1 mb-2 md:row-start-5 md:row-end-6 lg:row-start-4 lg:row-end-5 ${colPlacement}`}
           >
-            <h4 className="mb-2 font-semibold text-black-200 dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
+            <h4 className="mb-2 select-none font-semibold text-black-200 dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
               Tech Stack
             </h4>
-            <div className="flex flex-row flex-wrap gap-x-4 md:justify-center 2xl:gap-x-6">
+            <div className="flex flex-row flex-wrap gap-x-4 md:justify-center">
               {createProjectIcons(stack)}
             </div>
           </div>
           <div
-            className={`row-span-1 mb-2 md:row-start-5 md:row-end-6 ${colPlacement}`}
+            className={`row-span-1 mb-2 md:row-start-6 md:row-end-7 lg:row-start-5 lg:row-end-6 ${colPlacement}`}
           >
-            <h4 className="mb-2 font-semibold text-black-200 transition-colors duration-300 ease-out dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
+            <h4 className="mb-2 select-none font-semibold text-black-200 transition-colors duration-300 ease-out dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
               Links
             </h4>
-            <div className="flex flex-row flex-wrap gap-x-4 md:justify-center 2xl:gap-x-6">
+            <div className="flex flex-row flex-wrap gap-x-4 md:justify-center">
               {createProjectIcons(links)}
             </div>
           </div>
@@ -108,7 +109,8 @@ const ProjectCard = ({
               src={image}
               alt={`Image of ${projectTitle}`}
               placeholder="blur"
-              className="h-full object-cover object-center"
+              fill
+              className="object-cover object-center"
             />
           </aside>
         </li>
