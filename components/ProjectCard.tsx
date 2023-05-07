@@ -79,7 +79,7 @@ const ProjectCard = ({
             <h4 className="mb-2 font-semibold text-black-200 dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
               Tech Stack
             </h4>
-            <div className="flex flex-row flex-wrap gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6">
+            <div className="flex flex-row flex-wrap gap-x-4 md:justify-center 2xl:gap-x-6">
               {createProjectIcons(stack)}
             </div>
           </div>
@@ -89,7 +89,7 @@ const ProjectCard = ({
             <h4 className="mb-2 font-semibold text-black-200 transition-colors duration-300 ease-out dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
               Links
             </h4>
-            <div className="flex flex-row flex-wrap gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6">
+            <div className="flex flex-row flex-wrap gap-x-4 md:justify-center 2xl:gap-x-6">
               {createProjectIcons(links)}
             </div>
           </div>
