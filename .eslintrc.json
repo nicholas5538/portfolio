@@ -3,7 +3,6 @@
   "extends": ["next/core-web-vitals", "eslint:recommended"],
   "plugins": ["testing-library", "jest"],
   "overrides": [
-    // Only uses Testing Library lint rules in test files
     {
       "files": [
         "**/__tests__/**/*.[jt]s?(x)",
@@ -14,7 +13,18 @@
         "plugin:jest/recommended",
         "plugin:jest/style",
         "plugin:yml/standard"
-      ]
+      ],
+      "rules": {
+        "testing-library/await-async-query": "error",
+        "testing-library/no-dom-import": "error",
+        "testing-library/no-await-async-events": "error",
+        "testing-library/prefer-user-event": "error",
+        "testing-library/prefer-wait-for": "error",
+        "testing-library/no-wait-for-multiple-assertions": "error",
+        "testing-library/no-wait-for-empty-callback": "warn",
+        "testing-library/no-unnecessary-act": "warn",
+        "testing-library/await-fire-event": "warn"
+      }
     }
   ],
   "rules": {
