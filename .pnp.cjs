@@ -61,7 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-toggle-dark-mode", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.1.1"],\
             ["seamless-scroll-polyfill", "npm:2.3.4"],\
             ["sharp", "npm:0.32.1"],\
-            ["tailwind-merge", "npm:1.13.1"],\
+            ["tailwind-merge", "npm:1.13.2"],\
             ["tailwindcss", "npm:3.3.2"],\
             ["typescript", "patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=85af82"]\
           ],\
@@ -7202,7 +7202,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-toggle-dark-mode", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.1.1"],\
             ["seamless-scroll-polyfill", "npm:2.3.4"],\
             ["sharp", "npm:0.32.1"],\
-            ["tailwind-merge", "npm:1.13.1"],\
+            ["tailwind-merge", "npm:1.13.2"],\
             ["tailwindcss", "npm:3.3.2"],\
             ["typescript", "patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=85af82"]\
           ],\
@@ -12622,10 +12622,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["tailwind-merge", [\
-        ["npm:1.13.1", {\
-          "packageLocation": "./.yarn/cache/tailwind-merge-npm-1.13.1-0f54741b9d-25ae5100b3.zip/node_modules/tailwind-merge/",\
+        ["npm:1.13.2", {\
+          "packageLocation": "./.yarn/cache/tailwind-merge-npm-1.13.2-3c79926951-8f9de3bd1e.zip/node_modules/tailwind-merge/",\
           "packageDependencies": [\
-            ["tailwind-merge", "npm:1.13.1"]\
+            ["tailwind-merge", "npm:1.13.2"]\
           ],\
           "linkType": "HARD"\
         }]\
