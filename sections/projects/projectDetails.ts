@@ -94,11 +94,6 @@ const stockProjectCard: Tproject = {
       tooltipText: 'YouTube',
       url: 'https://youtu.be/T_cgG668pf4',
     },
-    {
-      Icon: FaExternalLinkAlt,
-      tooltipText: 'Website',
-      url: 'https://stockstracker.up.railway.app/user/login/',
-    },
   ],
 };
 
