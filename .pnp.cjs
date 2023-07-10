@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lottie-light-react", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:2.4.0"],\
             ["next", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:13.4.7"],\
             ["postcss", "npm:8.4.24"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-tailwindcss", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:0.3.0"],\
             ["pretty-quick", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:3.1.3"],\
             ["react", "npm:18.2.0"],\
@@ -7209,7 +7209,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lottie-light-react", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:2.4.0"],\
             ["next", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:13.4.7"],\
             ["postcss", "npm:8.4.24"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-tailwindcss", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:0.3.0"],\
             ["pretty-quick", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:3.1.3"],\
             ["react", "npm:18.2.0"],\
@@ -11406,10 +11406,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.8.8", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.8.8-430828a36c-b49e409431.zip/node_modules/prettier/",\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-3.0.0-7ffbcce680-6a832876a1.zip/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.8.8"]\
+            ["prettier", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11447,7 +11447,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/shopify__prettier-plugin-liquid", null],\
             ["@types/shufo__prettier-plugin-blade", null],\
             ["@types/trivago__prettier-plugin-sort-imports", null],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-astro", null],\
             ["prettier-plugin-css-order", null],\
             ["prettier-plugin-import-sort", null],\
@@ -11547,7 +11547,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ignore", "npm:5.2.4"],\
             ["mri", "npm:1.2.0"],\
             ["multimatch", "npm:4.0.0"],\
-            ["prettier", "npm:2.8.8"]\
+            ["prettier", "npm:3.0.0"]\
           ],\
           "packagePeers": [\
             "@types/prettier",\
