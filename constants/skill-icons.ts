@@ -5,10 +5,12 @@ import {
   SiCss3,
   SiCypress,
   SiDjango,
+  SiExpress,
   SiFigma,
   SiFramer,
   SiHtml5,
   SiJavascript,
+  SiMongodb,
   SiMysql,
   SiNextdotjs,
   SiPostgresql,
@@ -18,6 +20,7 @@ import {
   SiTypescript,
   SiVite,
 } from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa6';
 
 export type TIcons = {
   heading: string;
@@ -31,6 +34,8 @@ export const goodCodingIcons = [
   { Icon: SiCss3, tooltipText: 'CSS' },
   { Icon: SiJavascript, tooltipText: 'JavaScript' },
   { Icon: SiTypescript, tooltipText: 'TypeScript' },
+  { Icon: FaNodeJs, tooltipText: 'Node.js' },
+  { Icon: SiExpress, tooltipText: 'Express' },
   { Icon: SiReact, tooltipText: 'React' },
   { Icon: SiTailwindcss, tooltipText: 'Tailwind CSS' },
   { Icon: SiBootstrap, tooltipText: 'Bootstrap' },
@@ -41,7 +46,8 @@ export const goodDesignIcons = [
 ];
 
 export const averageCodingIcons = [
-  { Icon: SiNextdotjs, tooltipText: 'Nextjs' },
+  { Icon: SiNextdotjs, tooltipText: 'Next.js' },
+  { Icon: SiMongodb, tooltipText: 'MongoDB' },
   { Icon: SiMysql, tooltipText: 'MySQL' },
   { Icon: SiPostgresql, tooltipText: 'PostgreSQL' },
   { Icon: SiFramer, tooltipText: 'Framer Motion' },

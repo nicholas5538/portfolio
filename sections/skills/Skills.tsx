@@ -1,17 +1,17 @@
 'use client';
 
 import React, { lazy } from 'react';
+import { m } from 'framer-motion';
+import SkillCategory from './SkillCategory';
+import SkillsLight from '../../public/animations/skills-light.json';
+import SkillsDark from '../../public/animations/skills-dark.json';
+import Animation from '@/components/Animation';
 import {
   goodCodingIcons,
   goodDesignIcons,
   averageCodingIcons,
   averageDesignIcons,
-} from './common';
-import Animation from '../../components/Animation';
-import { m } from 'framer-motion';
-import SkillCategory from './SkillCategory';
-import SkillsLight from '../../public/animations/skills-light.json';
-import SkillsDark from '../../public/animations/skills-dark.json';
+} from '@/constants/skill-icons';
 import { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';

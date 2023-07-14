@@ -1,7 +1,7 @@
 import React from 'react';
-import { averageDesignIcons, goodDesignIcons, TIcons } from './common';
 import { m } from 'framer-motion';
 import Tooltip from '@/components/Tooltip';
+import { averageDesignIcons, goodDesignIcons, TIcons } from '@/constants/skill-icons';
 import { Tvariants } from '@/constants/typeInterface';
 
 const SkillCategory = ({

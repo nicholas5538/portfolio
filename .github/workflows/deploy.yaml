@@ -18,14 +18,14 @@ on:
 
 jobs:
   Test-deploy-preview:
-    if: ${{ github.actor != 'dependabot[bot]' && github.event_name == 'pull_request' }}
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.3
 
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.7.0
         with:
           node-version: 18
           cache: 'yarn'
@@ -37,9 +37,11 @@ jobs:
         run: yarn test
 
       - name: Generate coverage report
+        if: ${{ github.actor != 'dependabot[bot]' }}
         run: yarn test:cov
 
       - name: Upload coverage report to Codecov
+        if: ${{ github.actor != 'dependabot[bot]' }}
         uses: codecov/codecov-action@v3.1.4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -49,15 +51,19 @@ jobs:
           verbose: true
 
       - name: Install Vercel CLI
+        if: ${{ github.actor != 'dependabot[bot]' }}
         run: npm install --global vercel@latest
 
       - name: Pull Vercel Environment Information
+        if: ${{ github.actor != 'dependabot[bot]' }}
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build Project Artifacts
+        if: ${{ github.actor != 'dependabot[bot]' }}
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
+        if: ${{ github.actor != 'dependabot[bot]' }}
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
 
   Deploy-Production:
