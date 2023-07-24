@@ -60,7 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-icons", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:4.10.1"],\
             ["react-toggle-dark-mode", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.1.1"],\
             ["seamless-scroll-polyfill", "npm:2.3.4"],\
-            ["sharp", "npm:0.32.3"],\
+            ["sharp", "npm:0.32.4"],\
             ["tailwind-merge", "npm:1.14.0"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=85af82"]\
@@ -7059,6 +7059,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["detect-libc", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/detect-libc-npm-2.0.2-03afa59137-2b2cd3649b.zip/node_modules/detect-libc/",\
+          "packageDependencies": [\
+            ["detect-libc", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["detect-newline", [\
@@ -7242,7 +7249,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-icons", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:4.10.1"],\
             ["react-toggle-dark-mode", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.1.1"],\
             ["seamless-scroll-polyfill", "npm:2.3.4"],\
-            ["sharp", "npm:0.32.3"],\
+            ["sharp", "npm:0.32.4"],\
             ["tailwind-merge", "npm:1.14.0"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=85af82"]\
@@ -12192,12 +12199,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sharp", [\
-        ["npm:0.32.3", {\
-          "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.3-accd89915c/node_modules/sharp/",\
+        ["npm:0.32.4", {\
+          "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.4-5e8bfafca7/node_modules/sharp/",\
           "packageDependencies": [\
-            ["sharp", "npm:0.32.3"],\
+            ["sharp", "npm:0.32.4"],\
             ["color", "npm:4.2.3"],\
-            ["detect-libc", "npm:2.0.1"],\
+            ["detect-libc", "npm:2.0.2"],\
             ["node-addon-api", "npm:6.1.0"],\
             ["node-gyp", "npm:9.3.1"],\
             ["prebuild-install", "npm:7.1.1"],\
