@@ -4,10 +4,10 @@ import MotionProvider from '@/hooks/useMotionContext';
 import RefsProvider from '@/hooks/useRefsContext';
 import ThemeProvider from '@/hooks/useThemeContext';
 import AboutMe from '@/sections/about-me/AboutMe';
-import Hero from '@/sections/hero/Hero';
 import MainNavigation from '@/sections/navbar/MainNavigation';
 import Splash from '@/sections/splash/Splash';
 
+const Hero = dynamic(() => import('@/sections/hero/Hero')) as FC;
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop')) as FC;
 const Skills = dynamic(() => import('@/sections/skills/Skills')) as FC;
 const Experience = dynamic(
