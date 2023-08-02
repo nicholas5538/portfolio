@@ -5,18 +5,19 @@ import { clsx } from 'clsx';
 import DropdownMenu from './DropdownMenu';
 import { motion } from 'framer-motion';
 import NavbarLinks from './NavbarLinks';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import { IoHappyOutline } from 'react-icons/io5';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { Root } from '@radix-ui/react-toggle';
 import { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
 import useScrollDirection from '@/hooks/useScrollDirection';
 
 const MainNavigation = () => {
-  const { darkMode, setDarkMode, toggleThemeHandler } =
-    useThemeContext() ?? false;
+  const { darkMode, toggleThemeHandler } = useThemeContext() ?? false;
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const scrollDirection = useScrollDirection();
+  const ThemeIcon = darkMode ? FaMoon : FaSun;
 
   const childAnimation: Tanimation = {
     hidden: {
@@ -78,14 +79,19 @@ const MainNavigation = () => {
           className="order-last"
           data-testid="darkModeSwitch"
         >
-          <DarkModeSwitch
-            checked={darkMode}
-            onChange={(checked: boolean) => setDarkMode(checked)}
-            onClick={toggleThemeHandler}
-            sunColor={'#343434'}
-            moonColor={'#FFB26B'}
+          <Root
+            aria-label="Toggle theme"
+            className={clsx(
+              'text-2xl text-aqua hover:text-dark-aqua dark:text-light-orange dark:hover:text-orange-red',
+              'flex h-[35px] w-[35px] items-center justify-center rounded leading-4',
+              'transition-colors duration-300 ease-out'
+            )}
+            pressed={darkMode}
+            onPressedChange={toggleThemeHandler}
             data-testid="sun-moon"
-          />
+          >
+            <ThemeIcon />
+          </Root>
         </motion.div>
       </nav>
     </motion.header>
