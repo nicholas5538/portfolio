@@ -13,7 +13,7 @@ const monserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Nicholas Yong',
   description:
-    'Hi, I\'m Nicholas and I love to build simple and beautiful things!',
+    "Hi, I'm Nicholas and I love to build simple and beautiful things!",
   creator: 'Nicholas Yong',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#f8f8f8' },
