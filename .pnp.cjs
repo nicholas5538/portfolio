@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:27.2.3"],\
             ["eslint-plugin-testing-library", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:5.11.1"],\
             ["eslint-plugin-yml", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.8.0"],\
-            ["framer-motion", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.0"],\
+            ["framer-motion", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.1"],\
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:29.6.2"],\
             ["jest-canvas-mock", "npm:2.5.2"],\
@@ -7012,7 +7012,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:27.2.3"],\
             ["eslint-plugin-testing-library", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:5.11.1"],\
             ["eslint-plugin-yml", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.8.0"],\
-            ["framer-motion", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.0"],\
+            ["framer-motion", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.1"],\
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:29.6.2"],\
             ["jest-canvas-mock", "npm:2.5.2"],\
@@ -8050,17 +8050,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["framer-motion", [\
-        ["npm:10.15.0", {\
-          "packageLocation": "./.yarn/cache/framer-motion-npm-10.15.0-226d4d011e-29f9d4368d.zip/node_modules/framer-motion/",\
+        ["npm:10.15.1", {\
+          "packageLocation": "./.yarn/cache/framer-motion-npm-10.15.1-3ec30a2a4f-b8b08561d1.zip/node_modules/framer-motion/",\
           "packageDependencies": [\
-            ["framer-motion", "npm:10.15.0"]\
+            ["framer-motion", "npm:10.15.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.0", {\
-          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-f47c662089/0/cache/framer-motion-npm-10.15.0-226d4d011e-29f9d4368d.zip/node_modules/framer-motion/",\
+        ["virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.1", {\
+          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-503b79b82a/0/cache/framer-motion-npm-10.15.1-3ec30a2a4f-b8b08561d1.zip/node_modules/framer-motion/",\
           "packageDependencies": [\
-            ["framer-motion", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.0"],\
+            ["framer-motion", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:10.15.1"],\
             ["@emotion/is-prop-valid", "npm:0.8.8"],\
             ["@types/react", "npm:18.2.18"],\
             ["@types/react-dom", "npm:18.2.7"],\
