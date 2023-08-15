@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@eslint/js", "npm:8.46.0"],\
+            ["@eslint/js", "npm:8.47.0"],\
             ["@radix-ui/react-toggle", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.0.3"],\
             ["@radix-ui/react-tooltip", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.0.6"],\
             ["@svgr/webpack", "npm:8.0.1"],\
@@ -3228,13 +3228,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@eslint/js", [\
-        ["npm:8.46.0", {\
-          "packageLocation": "./.yarn/cache/@eslint-js-npm-8.46.0-3cfe1ee88b-7aed479832.zip/node_modules/@eslint/js/",\
-          "packageDependencies": [\
-            ["@eslint/js", "npm:8.46.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:8.47.0", {\
           "packageLocation": "./.yarn/cache/@eslint-js-npm-8.47.0-ecde461ef4-0ef57fe27b.zip/node_modules/@eslint/js/",\
           "packageDependencies": [\
@@ -7012,7 +7005,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["e-portfolio", "workspace:."],\
-            ["@eslint/js", "npm:8.46.0"],\
+            ["@eslint/js", "npm:8.47.0"],\
             ["@radix-ui/react-toggle", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.0.3"],\
             ["@radix-ui/react-tooltip", "virtual:b67f7d1174a78aea7bbf2c9d001cc7fdcf4077960021a996fd27e7577c2b852b449cbf2d47e6ef7df26340141889cb2a65a9a54d3a350fbe53cb3dd558c0dad4#npm:1.0.6"],\
             ["@svgr/webpack", "npm:8.0.1"],\
