@@ -1709,14 +1709,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.46.0":
-  version: 8.46.0
-  resolution: "@eslint/js@npm:8.46.0"
-  checksum: 7aed479832302882faf5bec37e9d068f270f84c19b3fb529646a7c1b031e73a312f730569c78806492bc09cfce3d7651dfab4ce09a56cbb06bc6469449e56377
-  languageName: node
-  linkType: hard
-
-"@eslint/js@npm:^8.47.0":
+"@eslint/js@npm:8.47.0, @eslint/js@npm:^8.47.0":
   version: 8.47.0
   resolution: "@eslint/js@npm:8.47.0"
   checksum: 0ef57fe27b6d4c305b33f3b2d2fee1ab397a619006f1d6f4ce5ee4746b8f03d11a4e098805a7d78601ca534cf72917d37f0ac19896c992a32e26299ecb9f9de1
@@ -4658,7 +4651,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "e-portfolio@workspace:."
   dependencies:
-    "@eslint/js": 8.46.0
+    "@eslint/js": 8.47.0
     "@radix-ui/react-toggle": 1.0.3
     "@radix-ui/react-tooltip": 1.0.6
     "@svgr/webpack": 8.0.1
