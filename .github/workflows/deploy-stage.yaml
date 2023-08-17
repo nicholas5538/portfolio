@@ -12,7 +12,7 @@ on:
       - '**.md'
 
 jobs:
-  Run-tests-and-deploy-staging:
+  Run-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,17 +24,25 @@ jobs:
       - name: Run tests in Docker container
         run: docker run --rm --name run-ut unit-test
 
-      - name: Setup Node.js environment
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        uses: actions/setup-node@v3.7.0
-        with:
-          node-version: 18
-          cache: 'pnpm'
-          cache-dependency-path: pnpm-lock.yaml
+  Deploy-to-staging:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    needs: Run-tests
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
 
       - name: Install pnpm for deployment
         if: ${{ github.actor != 'dependabot[bot]' }}
         run: npm install -g pnpm
+
+      - name: Setup Node.js environment
+        if: ${{ github.actor != 'dependabot[bot]' }}
+        uses: actions/setup-node@v3.8.0
+        with:
+          node-version: 18
+          cache: 'pnpm'
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install Vercel CLI
         if: ${{ github.actor != 'dependabot[bot]' }}

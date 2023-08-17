@@ -3,7 +3,7 @@ LABEL authors="nicholas5538"
 LABEL version="1.0"
 
 # Install pnpm
-RUN npm install -g pnpm
+RUN npm install -g pnpm@8.6.12
 COPY . /app/
 WORKDIR /app
 # Install dep and prod dependencies
