@@ -1,6 +1,7 @@
 {
-  "name": "e-portfolio",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "description": "A modern portfolio website",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -60,5 +61,5 @@
   "engines": {
     "node": "18"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "pnpm@8.6.12"
 }
