@@ -16,8 +16,8 @@ updates:
       time: '10:00'
       timezone: Asia/Singapore
     commit-message:
-      prefix: 'Yarn prod'
-      prefix-development: 'Yarn dev'
+      prefix: 'pnpm-prod'
+      prefix-development: 'pnpm-dev'
       include: 'scope'
     pull-request-branch-name:
       separator: '-'
