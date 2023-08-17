@@ -1,0 +1,8 @@
+node_modules
+.idea
+.git
+.github
+.gitignore
+.next
+*.md
+dist
