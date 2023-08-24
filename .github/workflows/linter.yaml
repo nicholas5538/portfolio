@@ -26,7 +26,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_CSS: false
           VALIDATE_DOCKERFILE_HADOLINT: false
-          VALIDATE_GITHUB_ACTIONS: false
           VALIDATE_MARKDOWN: false
           VALIDATE_JAVASCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_STANDARD: false
