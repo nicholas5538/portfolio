@@ -1,24 +1,33 @@
-FROM node:20-bookworm-slim AS base
+FROM node:current-alpine3.17 AS base
 LABEL authors="nicholas5538"
 LABEL version="1.0"
 
-# Install pnpm
-RUN npm install -g pnpm@8.6.12
-COPY . /app/
-WORKDIR /app
+RUN apk add --no-cache libc6-compat
 # Install dep and prod dependencies
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+WORKDIR /app
+COPY package.json pnpm-lock.yaml* ./
+RUN \
+  if [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
+
+COPY . .
 
 FROM base AS build
+ENV NEXT_TELEMETRY_DISABLED 1
 RUN pnpm run build
 
 FROM base AS development
 EXPOSE 3000
+ENV PORT 3000
 CMD [ "pnpm", "run", "dev" ]
 
 FROM base AS test
 CMD [ "pnpm", "run", "test" ]
 
 FROM base AS production
-COPY --from=build /app/.next /app/.next
+ENV NODE_ENV production
+ENV PORT 3000
+EXPOSE 3000
+COPY --from=build /app/.next ./.next
 CMD [ "pnpm", "run", "start" ]
