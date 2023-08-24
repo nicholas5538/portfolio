@@ -56,5 +56,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t portfolio-dev:latest --quiet --compress --target development .
-          docker tag portfolio-dev:latest ${DOCKERHUB_USERNAME}/portfolio-dev:latest
-          docker push ${DOCKERHUB_USERNAME}/portfolio-dev:latest
+          docker tag portfolio-dev:latest "${DOCKERHUB_USERNAME}/portfolio-dev:latest"
+          docker push "${DOCKERHUB_USERNAME}/portfolio-dev:latest"

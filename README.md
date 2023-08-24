@@ -10,7 +10,7 @@ It's a great opportunity to showcase my frontend skills, and to explore new fram
 
 ## Getting Started
 
-### Repo Setup
+### Repository Setup
 
 1. Fork this repository
 

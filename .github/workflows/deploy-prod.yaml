@@ -26,8 +26,8 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t portfolio-prod:latest --quiet --compress --target production .
-          docker tag portfolio-prod:latest ${DOCKERHUB_USERNAME}/portfolio-prod:latest
-          docker push ${DOCKERHUB_USERNAME}/portfolio-prod:latest
+          docker tag portfolio-prod:latest "${DOCKERHUB_USERNAME}/portfolio-prod:latest"
+          docker push "${DOCKERHUB_USERNAME}/portfolio-prod:latest"
 
       - name: Install pnpm
         run: npm i -g pnpm
