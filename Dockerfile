@@ -2,7 +2,7 @@ FROM node:current-alpine3.17 AS base
 LABEL authors="nicholas5538"
 LABEL version="1.0"
 
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat=1.1.22-r4
 # Install dep and prod dependencies
 WORKDIR /app
 COPY package.json pnpm-lock.yaml* ./

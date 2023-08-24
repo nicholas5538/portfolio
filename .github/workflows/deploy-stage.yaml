@@ -41,17 +41,17 @@ jobs:
         run: npm install --global vercel@latest
 
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=preview --token=${VERCEL_TOKEN}
+        run: vercel pull --yes --environment=preview --token="${VERCEL_TOKEN}"
 
       - name: Build Project Artifacts
-        run: vercel build --token=${VERCEL_TOKEN}
+        run: vercel build --token="${VERCEL_TOKEN}"
 
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${VERCEL_TOKEN}
+        run: vercel deploy --prebuilt --token="${VERCEL_TOKEN}"
 
       - name: Login to Docker Hub
         run: | 
-          echo "${{ secrets.DOCKERHUB_TOKEN }}" || docker login -u ${DOCKERHUB_USERNAME} --password-stdin
+          echo "${{ secrets.DOCKERHUB_TOKEN }}" || docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
 
       - name: Build and push Docker image
         run: |
