@@ -5,6 +5,7 @@ import {
   SiCss3,
   SiCypress,
   SiDjango,
+  SiDocker,
   SiExpress,
   SiFigma,
   SiFramer,
@@ -48,6 +49,7 @@ export const goodDesignIcons = [
 export const averageCodingIcons = [
   { Icon: SiNextdotjs, tooltipText: 'Next.js' },
   { Icon: SiMongodb, tooltipText: 'MongoDB' },
+  { Icon: SiDocker, tooltipText: 'Docker' },
   { Icon: SiMysql, tooltipText: 'MySQL' },
   { Icon: SiPostgresql, tooltipText: 'PostgreSQL' },
   { Icon: SiFramer, tooltipText: 'Framer Motion' },
