@@ -4,9 +4,9 @@ import Tooltip from '@/components/Tooltip';
 import {
   averageDesignIcons,
   goodDesignIcons,
-  TIcons,
+  type TIcons,
 } from '@/constants/skill-icons';
-import { Tvariants } from '@/constants/typeInterface';
+import type { Tvariants } from '@/constants/typeInterface';
 
 const SkillCategory = ({
   heading,

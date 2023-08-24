@@ -1,8 +1,10 @@
 ---
 name: Deploy to staging
 env:
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
 on:
   pull_request:
@@ -33,29 +35,28 @@ jobs:
         uses: actions/checkout@v3.5.3
 
       - name: Install pnpm for deployment
-        if: ${{ github.actor != 'dependabot[bot]' }}
         run: npm install -g pnpm
 
-      - name: Setup Node.js environment
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        uses: actions/setup-node@v3.8.0
-        with:
-          node-version: 18
-          cache: 'pnpm'
-          cache-dependency-path: pnpm-lock.yaml
-
       - name: Install Vercel CLI
-        if: ${{ github.actor != 'dependabot[bot]' }}
         run: npm install --global vercel@latest
 
       - name: Pull Vercel Environment Information
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --yes --environment=preview --token="${VERCEL_TOKEN}"
 
       - name: Build Project Artifacts
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel build --token="${VERCEL_TOKEN}"
 
       - name: Deploy Project Artifacts to Vercel
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prebuilt --token="${VERCEL_TOKEN}"
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2.2.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t portfolio-dev:latest --quiet --compress --target development .
+          docker tag portfolio-dev:latest "${DOCKERHUB_USERNAME}/portfolio-dev:latest"
+          docker push "${DOCKERHUB_USERNAME}/portfolio-dev:latest"

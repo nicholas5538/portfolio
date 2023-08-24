@@ -1,4 +1,4 @@
-# [My Portfolio website](https://nicholasyong.dev 'My portfolio page')
+# [My Portfolio site](https://nicholasyong.dev 'My portfolio page')
 
 ![Next.JS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
@@ -10,11 +10,11 @@ It's a great opportunity to showcase my frontend skills, and to explore new fram
 
 ## Getting Started
 
-### Repo Setup
+### Repository Setup
 
-1. Fork this repo
+1. Fork this repository
 
-  > 🚨 You can fork this repo and play around with it. But please give me proper credit by linking back to this [repo](https://github.com/nicholas5538/portfolio, 'nicholas5538 portfolio repo') if you're planning to use it. _Plagiarism is bad_ after all.
+  > 🚨 You can fork this repository and play around with it. But please give me proper credit by linking back to this [repo](https://github.com/nicholas5538/portfolio, 'nicholas5538 portfolio repo') if you're planning to use it. _Plagiarism is bad_ after all.
 
 2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
@@ -25,11 +25,12 @@ It's a great opportunity to showcase my frontend skills, and to explore new fram
 
 ## Developing
 
-Once you have [set up the repo](#repo-setup), you're ready to start developing. Starting the development environment is managed by the following command.
+Once you have [set up the repository](#repo-setup), you're ready to start developing. Starting the development environment is managed by the following command.
 
 - With **_Docker (recommended)_**
 ```sh
-docker build -t <image name> --target development .
+
+docker pull -q nicholas5538/portfolio-dev:latest
 docker run -d --name <container name> -p 3000:3000 <image name>
 ```
 
