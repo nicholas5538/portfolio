@@ -11,7 +11,7 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
       day: monday
       time: '10:00'
       timezone: Asia/Singapore

@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v3.6.0
 
       - name: Build Docker image
-        run: docker build -t unit-test --target test .
+        run: docker build --no-cache -t unit-test --target test .
 
       - name: Run tests in Docker container
         run: docker run --rm --name run-ut unit-test
@@ -32,7 +32,19 @@ jobs:
     needs: Run-tests
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v3.6.0
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2.2.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t portfolio-dev:latest --quiet --compress --target dev .
+          docker tag portfolio-dev:latest "${DOCKERHUB_USERNAME}/portfolio-dev:latest"
+          docker push "${DOCKERHUB_USERNAME}/portfolio-dev:latest"
 
       - name: Install pnpm for deployment
         run: npm install -g pnpm
@@ -48,15 +60,3 @@ jobs:
 
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token="${VERCEL_TOKEN}"
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2.2.0
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and push Docker image
-        run: |
-          docker build -t portfolio-dev:latest --quiet --compress --target development .
-          docker tag portfolio-dev:latest "${DOCKERHUB_USERNAME}/portfolio-dev:latest"
-          docker push "${DOCKERHUB_USERNAME}/portfolio-dev:latest"
