@@ -14,7 +14,7 @@ FROM base as prod-deps
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm i --prod --frozen-lockfile
 
 FROM base AS build
-COPY --from=prod-deps ./app/node_modules ./node_modules
+COPY --from=dev-deps ./app/node_modules ./node_modules
 RUN pnpm run build
 
 FROM base AS dev
