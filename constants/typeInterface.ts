@@ -1,9 +1,9 @@
-import { type IconType } from 'react-icons';
-import { Variants } from 'framer-motion';
-import { ReactNode, type Dispatch, type SetStateAction } from 'react';
+import type { IconType } from 'react-icons';
+import type { Variants } from 'framer-motion';
+import type { ReactElement, ReactNode, Dispatch, SetStateAction } from 'react';
 
 export type childrenNode = {
-  children: JSX.Element | JSX.Element[] | ReactNode;
+  children: ReactElement | ReactElement[] | ReactNode;
 };
 
 export type HamburgerProps = {
