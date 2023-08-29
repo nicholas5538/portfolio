@@ -2,7 +2,7 @@ import React from 'react';
 import MainNavigation from '../MainNavigation';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {logRoles} from '@testing-library/dom';
+import { logRoles } from '@testing-library/dom';
 
 it('Navbar is rendered with applicable elements', async () => {
   render(<MainNavigation />);
@@ -22,13 +22,12 @@ it('Dark mode switch toggling', async () => {
     expect(darkModeSwitch).toBeInTheDocument();
     expect(sunMoon).toBeInTheDocument();
   });
-  expect(sunMoon).toHaveAttribute("aria-pressed", "false");
-  expect(sunMoon).toHaveAttribute("data-state", "off");
+  expect(sunMoon).toHaveAttribute('aria-pressed', 'false');
+  expect(sunMoon).toHaveAttribute('data-state', 'off');
 
   await waitFor(() => {
     user.click(sunMoon);
-    expect(sunMoon).toHaveAttribute("aria-pressed", "true");
-    expect(sunMoon).toHaveAttribute("data-state", "on");
-  })
-
+    expect(sunMoon).toHaveAttribute('aria-pressed', 'true');
+    expect(sunMoon).toHaveAttribute('data-state', 'on');
+  });
 });

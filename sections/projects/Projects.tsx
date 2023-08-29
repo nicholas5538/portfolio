@@ -4,9 +4,9 @@ import React from 'react';
 import { projectCards } from './projectDetails';
 import Animation from '@/components/Animation';
 import ProjectCard from '@/components/ProjectCard';
+import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
-import { Tanimation } from '@/constants/typeInterface';
 import { Provider } from '@radix-ui/react-tooltip';
 
 const Projects = () => {

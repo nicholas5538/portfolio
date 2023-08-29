@@ -4,8 +4,8 @@ import { LazyMotion, domAnimation, m } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tooltip from '@/components/Tooltip';
-import { Tanimation } from '@/constants/typeInterface';
-import { Tproject } from '@/sections/projects/projectDetails';
+import type { Tanimation } from '@/constants/typeInterface';
+import type { Tproject } from '@/sections/projects/projectDetails';
 
 const ProjectCard = ({
   id,

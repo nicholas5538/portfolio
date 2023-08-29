@@ -1,24 +1,8 @@
-import {
-  SiArduino,
-  SiBootstrap,
-  SiCss3,
-  SiDjango,
-  SiFramer,
-  SiGithub,
-  SiHtml5,
-  SiJavascript,
-  SiJupyter,
-  SiPostgresql,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiVite,
-  SiYoutube,
-} from 'react-icons/si';
+import { goodCodingIcons, averageCodingIcons } from '@/constants/skill-icons';
+import { SiArduino, SiGithub, SiJupyter, SiYoutube } from 'react-icons/si';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-import { StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/image';
 import handSanitizerImage from '../../public/images/handsanitizer.webp';
 import pepsiImage from '../../public/images/pepsi-corporate.webp';
 import stockImage from '../../public/images/stocks-portfolio.webp';
@@ -30,12 +14,12 @@ export type Tproject = {
   projectTitle: string;
   projectDesc: string;
   stack: {
-    Icon: typeof SiBootstrap;
+    Icon: typeof SiArduino;
     tooltipText: string;
     url?: string;
   }[];
   links: {
-    Icon: typeof SiBootstrap;
+    Icon: typeof SiArduino;
     tooltipText: 'YouTube' | 'GitHub' | 'Website';
     url: string;
   }[];
@@ -48,17 +32,20 @@ const voucherManagementCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to carry out CRUD operations on vouchers. It also provides a data table for convenient access to all information related to the vouchers.',
   stack: [
-    { Icon: SiReact, tooltipText: 'React' },
-    { Icon: SiTypescript, tooltipText: 'TypeScript' },
-    { Icon: SiVite, tooltipText: 'Vite' },
-    { Icon: SiTailwindcss, tooltipText: 'Tailwind CSS' },
-    { Icon: SiFramer, tooltipText: 'Framer Motion' },
+    goodCodingIcons[5],
+    goodCodingIcons[6],
+    goodCodingIcons[7],
+    goodCodingIcons[8],
+    goodCodingIcons[9],
+    averageCodingIcons[1],
+    averageCodingIcons[2],
+    { ...averageCodingIcons[7], tooltipText: 'Vite' },
   ],
   links: [
     {
       Icon: SiGithub,
       tooltipText: 'GitHub',
-      url: 'https://github.com/nicholas5538/fp-capstone',
+      url: 'https://github.com/nicholas5538/fp-voucher-FE',
     },
     {
       Icon: FaExternalLinkAlt,
@@ -75,13 +62,13 @@ const stockProjectCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to quickly analyze the performance of their stock portfolio. It also allows users to save and make changes to their transaction history, which can be easily accessed on a single page.',
   stack: [
-    { Icon: SiPython, tooltipText: 'Python' },
-    { Icon: SiDjango, tooltipText: 'Django' },
-    { Icon: SiHtml5, tooltipText: 'HTML' },
-    { Icon: SiCss3, tooltipText: 'CSS' },
-    { Icon: SiJavascript, tooltipText: 'JavaScript' },
-    { Icon: SiBootstrap, tooltipText: 'Bootstrap' },
-    { Icon: SiPostgresql, tooltipText: 'PostgreSQL' },
+    goodCodingIcons[0],
+    goodCodingIcons[1],
+    goodCodingIcons[2],
+    goodCodingIcons[3],
+    goodCodingIcons[4],
+    goodCodingIcons[10],
+    averageCodingIcons[4],
   ],
   links: [
     {
@@ -104,7 +91,7 @@ const ioTProjectCard: Tproject = {
   projectDesc:
     'A hand sanitizer product that incorporates data analytics and simple machine learning techniques to forecast certain data points, such as the number of times the sanitizer dispenser needs to be used before it runs out.',
   stack: [
-    { Icon: SiPython, tooltipText: 'Python' },
+    goodCodingIcons[0],
     { Icon: SiJupyter, tooltipText: 'Jupyter Notebook' },
     { Icon: SiArduino, tooltipText: 'Arduino' },
   ],
@@ -129,10 +116,10 @@ const pepsiProjectCard: Tproject = {
   projectDesc:
     'Creating a new React-based single-page application from the beginning, in order to gain familiarity with various tools, including Typescript, React Router, framer motion, and the vitest unit testing framework.',
   stack: [
-    { Icon: SiReact, tooltipText: 'React' },
-    { Icon: SiTypescript, tooltipText: 'TypeScript' },
-    { Icon: SiVite, tooltipText: 'Vite & Vitest' },
-    { Icon: SiFramer, tooltipText: 'Framer Motion' },
+    goodCodingIcons[5],
+    goodCodingIcons[8],
+    averageCodingIcons[7],
+    averageCodingIcons[5],
   ],
   links: [
     {

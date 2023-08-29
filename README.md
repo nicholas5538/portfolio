@@ -14,32 +14,37 @@ It's a great opportunity to showcase my frontend skills, and to explore new fram
 
 1. Fork this repository
 
-  > 🚨 You can fork this repository and play around with it. But please give me proper credit by linking back to this [repo](https://github.com/nicholas5538/portfolio, 'nicholas5538 portfolio repo') if you're planning to use it. _Plagiarism is bad_ after all.
+> 🚨 You can fork this repository and play around with it. But please give me proper credit by linking back to this [repo](https://github.com/nicholas5538/portfolio, 'nicholas5538 portfolio repo') if you're planning to use it. _Plagiarism is bad_ after all.
 
 2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-  > This is to reduce "It works on my machine" problems
+> This is to reduce "It works on my machine" problems
 
 3. Install [pnpm](https://pnpm.io/installation) (Only required if you want to develop without Docker)
-  > 💁 `npm install -g pnpm`
+   > 💁 `npm install -g pnpm`
 
 ## Developing
 
 Once you have [set up the repository](#repo-setup), you're ready to start developing. Starting the development environment is managed by the following command.
 
 - With **_Docker (recommended)_**
-```sh
 
+```sh
+# You can either pull the image from Docker Hub or build your own image
 docker pull -q nicholas5538/portfolio-dev:latest
-docker run -d -p 3000:3000 -v $(pwd):/home/node/app --name <container name> <image name>
+docker build --compress -t <image name> --target dev .
+# For Windows PowerShell: ${pwd}, MacOS: $(pwd)
+docker run -d -p 3000:3000 -v $(pwd):/home/node/app --name <container name> portfolio-dev
 ```
 
-The `docker run` command will create and run a new container from an image you have built with `docker build` command.
+The `docker run` command will create and run a new container from an image you have pulled with `docker pull`command **OR** the image you have built with `docker build` command.
 
 - With **_pnpm_**
+
 ```sh
 pnpm run dev
 ```
+
 The `dev` command will start the application in your local environment.
 
 ### Frequently Used Scripts
