@@ -1,6 +1,6 @@
 import { Montserrat } from 'next/font/google';
-import { Metadata } from 'next';
-import { childrenNode } from '@/constants/typeInterface';
+import type { Metadata } from 'next';
+import type { childrenNode } from '@/constants/typeInterface';
 import './globals.css';
 
 const monserrat = Montserrat({

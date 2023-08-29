@@ -5,12 +5,12 @@ const nextConfig = {
     buildActivityPosition: 'bottom-right',
   },
   eslint: {
-    ignoreDuringBuilds: false
+    ignoreDuringBuilds: false,
   },
   reactStrictMode: true,
   output: 'standalone',
   typescript: {
-    ignoreBuildErrors: false
+    ignoreBuildErrors: false,
   },
   webpack(config) {
     config.module.rules.push({
