@@ -31,7 +31,7 @@ Once you have [set up the repository](#repo-setup), you're ready to start develo
 ```sh
 
 docker pull -q nicholas5538/portfolio-dev:latest
-docker run -d --name <container name> -p 3000:3000 <image name>
+docker run -d -p 3000:3000 -v $(pwd):/home/node/app --name <container name> <image name>
 ```
 
 The `docker run` command will create and run a new container from an image you have built with `docker build` command.
