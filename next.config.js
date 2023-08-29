@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  compress: true,
   devIndicators: {
     buildActivityPosition: 'bottom-right',
   },

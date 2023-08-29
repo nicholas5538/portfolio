@@ -10,9 +10,6 @@ WORKDIR /app
 FROM base as dev-deps
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm i --frozen-lockfile
 
-FROM base as prod-deps
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm i --prod --frozen-lockfile
-
 FROM base AS build
 COPY --from=dev-deps ./app/node_modules ./node_modules
 RUN pnpm run build

@@ -2,9 +2,9 @@ import React from 'react';
 import { clsx } from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
-import { HamburgerProps } from '@/constants/typeInterface';
 import { scrollToRef } from '@/constants/global';
 import { listElements } from '@/constants/global';
+import type { HamburgerProps } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 
@@ -69,7 +69,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}
           transition={transitionType}
-          className="absolute left-0 top-12 z-50 w-full max-w-sm"
+          className="absolute left-0 top-14 z-50 w-full max-w-sm ipad-mini:top-12"
           data-testid="dropdown-ul"
         >
           <ul className="rounded-xl bg-white-400 shadow-dropdown dark:bg-black-500 dark:shadow-none">
