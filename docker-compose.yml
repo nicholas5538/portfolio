@@ -5,12 +5,12 @@ services:
       context: .
       dockerfile: Dockerfile
       target: dev
-    container_name: portfolio-dev
+    container_name: docker-next
     command: pnpm run dev
+    restart: always
     ports:
       - '3000:3000'
     volumes:
       - .:/app
-
-volumes:
-  .:
+      - /app/node_modules
+      - /app/.next
