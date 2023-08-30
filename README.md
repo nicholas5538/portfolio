@@ -30,11 +30,15 @@ Once you have [set up the repository](#repo-setup), you're ready to start develo
 - With **_Docker (recommended)_**
 
 ```sh
+# With Docker compose, you're able
+# to see live changes after refreshing
+docker compose up -d --build
+
+# Or pulling from docker hub
 # You can either pull the image from Docker Hub or build your own image
 docker pull -q nicholas5538/portfolio-dev:latest
 docker build --compress -t <image name> --target dev .
-# For Windows PowerShell: ${pwd}, MacOS: $(pwd)
-docker run -d -p 3000:3000 -v $(pwd):/home/node/app --name <container name> portfolio-dev
+docker run -d -p 3000:3000 -v .:/app -v /app/node_modules --name <container name> portfolio-dev
 ```
 
 The `docker run` command will create and run a new container from an image you have pulled with `docker pull`command **OR** the image you have built with `docker build` command.
