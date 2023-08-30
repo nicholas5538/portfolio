@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    container_name: portfolio-dev
+    command: pnpm run dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+
+volumes:
+  .:
