@@ -1,4 +1,4 @@
-FROM node:current-alpine3.17 AS base
+FROM node:18-alpine3.18 AS base
 LABEL authors="nicholas5538"
 LABEL version="1.0"
 
@@ -18,7 +18,11 @@ FROM base AS dev
 COPY --from=dev-deps ./app/node_modules ./node_modules
 
 EXPOSE 3000
+ENV HOSTNAME "0.0.0.0"
 ENV PORT 3000
+ENV NODE_ENV development
+ENV NEXT_TELEMETRY_DISABLED 1
+ENV WATCHPACK_POLLING true
 
 CMD ["pnpm", "run", "dev"]
 
