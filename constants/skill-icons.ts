@@ -25,37 +25,72 @@ import { FaNodeJs } from 'react-icons/fa6';
 
 export type TIcons = {
   heading: string;
-  icons: typeof goodCodingIcons;
+  icons: typeof goodCodingIcons | typeof goodDesignIcons | typeof averageCodingIcons | typeof averageDesignIcons;
 };
 
-export const goodCodingIcons = [
-  { Icon: SiPython, tooltipText: 'Python' },
-  { Icon: SiDjango, tooltipText: 'Django' },
-  { Icon: SiHtml5, tooltipText: 'HTML' },
-  { Icon: SiCss3, tooltipText: 'CSS' },
-  { Icon: SiJavascript, tooltipText: 'JavaScript' },
-  { Icon: SiTypescript, tooltipText: 'TypeScript' },
-  { Icon: FaNodeJs, tooltipText: 'Node.js' },
-  { Icon: SiExpress, tooltipText: 'Express' },
-  { Icon: SiReact, tooltipText: 'React' },
-  { Icon: SiTailwindcss, tooltipText: 'Tailwind CSS' },
-  { Icon: SiBootstrap, tooltipText: 'Bootstrap' },
-];
+export const goodCodingIcons = {
+  python: {
+    Icon: SiPython,
+    tooltipText: 'Python',
+  },
+  django: {
+    Icon: SiDjango,
+    tooltipText: 'Django',
+  },
+  html: {
+    Icon: SiHtml5,
+    tooltipText: 'HTML',
+  },
+  css: {
+    Icon: SiCss3,
+    tooltipText: 'CSS',
+  },
+  js: {
+    Icon: SiJavascript,
+    tooltipText: 'JavaScript',
+  },
+  ts: {
+    Icon: SiTypescript,
+    tooltipText: 'TypeScript',
+  },
+  node: {
+    Icon: FaNodeJs,
+    tooltipText: 'node.js',
+  },
+  express: {
+    Icon: SiExpress,
+    tooltipText: 'Express',
+  },
+  react: {
+    Icon: SiReact,
+    tooltipText: 'React',
+  },
+  tailwind: {
+    Icon: SiTailwindcss,
+    tooltipText: 'Tailwind CSS',
+  },
+  bootstrap: {
+    Icon: SiBootstrap,
+    tooltipText: 'Bootstrap',
+  },
+};
 
-export const goodDesignIcons = [
-  { Icon: SiAdobe, tooltipText: 'Photoshop & Lightroom' },
-];
+export const goodDesignIcons = {
+  ps: { Icon: SiAdobe, tooltipText: 'Photoshop & Lightroom' },
+};
 
-export const averageCodingIcons = [
-  { Icon: SiNextdotjs, tooltipText: 'Next.js' },
-  { Icon: SiMongodb, tooltipText: 'MongoDB' },
-  { Icon: SiDocker, tooltipText: 'Docker' },
-  { Icon: SiMysql, tooltipText: 'MySQL' },
-  { Icon: SiPostgresql, tooltipText: 'PostgreSQL' },
-  { Icon: SiFramer, tooltipText: 'Framer Motion' },
-  { Icon: SiCypress, tooltipText: 'Cypress' },
-  { Icon: SiVite, tooltipText: 'Vite & Vitest' },
-  { Icon: SiC, tooltipText: 'C' },
-];
+export const averageCodingIcons = {
+  next: { Icon: SiNextdotjs, tooltipText: 'Next.js' },
+  mongoDB: { Icon: SiMongodb, tooltipText: 'MongoDB' },
+  docker: { Icon: SiDocker, tooltipText: 'Docker' },
+  mySQL: { Icon: SiMysql, tooltipText: 'MySQL' },
+  postgreSQL: { Icon: SiPostgresql, tooltipText: 'PostgreSQL' },
+  framer: { Icon: SiFramer, tooltipText: 'Framer Motion' },
+  cypress: { Icon: SiCypress, tooltipText: 'Cypress' },
+  vite: { Icon: SiVite, tooltipText: 'Vite & Vitest' },
+  c: { Icon: SiC, tooltipText: 'C' },
+};
 
-export const averageDesignIcons = [{ Icon: SiFigma, tooltipText: 'Figma' }];
+export const averageDesignIcons = {
+  figma: { Icon: SiFigma, tooltipText: 'Figma' }
+};

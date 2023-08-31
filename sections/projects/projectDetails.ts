@@ -32,14 +32,14 @@ const voucherManagementCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to carry out CRUD operations on vouchers. It also provides a data table for convenient access to all information related to the vouchers.',
   stack: [
-    goodCodingIcons[5],
-    goodCodingIcons[6],
-    goodCodingIcons[7],
-    goodCodingIcons[8],
-    goodCodingIcons[9],
-    averageCodingIcons[1],
-    averageCodingIcons[2],
-    { ...averageCodingIcons[7], tooltipText: 'Vite' },
+    goodCodingIcons.ts,
+    goodCodingIcons.node,
+    goodCodingIcons.express,
+    goodCodingIcons.react,
+    goodCodingIcons.tailwind,
+    averageCodingIcons.mongoDB,
+    averageCodingIcons.docker,
+    { ...averageCodingIcons.vite, tooltipText: 'Vite' },
   ],
   links: [
     {
@@ -50,7 +50,7 @@ const voucherManagementCard: Tproject = {
     {
       Icon: FaExternalLinkAlt,
       tooltipText: 'Website',
-      url: 'https://fp-capstone-voucher-78842.web.app',
+      url: 'https://fp-voucher-portal.onrender.com',
     },
   ],
 };
@@ -62,13 +62,13 @@ const stockProjectCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to quickly analyze the performance of their stock portfolio. It also allows users to save and make changes to their transaction history, which can be easily accessed on a single page.',
   stack: [
-    goodCodingIcons[0],
-    goodCodingIcons[1],
-    goodCodingIcons[2],
-    goodCodingIcons[3],
-    goodCodingIcons[4],
-    goodCodingIcons[10],
-    averageCodingIcons[4],
+    goodCodingIcons.python,
+    goodCodingIcons.django,
+    goodCodingIcons.html,
+    goodCodingIcons.css,
+    goodCodingIcons.js,
+    goodCodingIcons.bootstrap,
+    averageCodingIcons.postgreSQL,
   ],
   links: [
     {
@@ -91,7 +91,7 @@ const ioTProjectCard: Tproject = {
   projectDesc:
     'A hand sanitizer product that incorporates data analytics and simple machine learning techniques to forecast certain data points, such as the number of times the sanitizer dispenser needs to be used before it runs out.',
   stack: [
-    goodCodingIcons[0],
+    goodCodingIcons.python,
     { Icon: SiJupyter, tooltipText: 'Jupyter Notebook' },
     { Icon: SiArduino, tooltipText: 'Arduino' },
   ],
@@ -116,10 +116,10 @@ const pepsiProjectCard: Tproject = {
   projectDesc:
     'Creating a new React-based single-page application from the beginning, in order to gain familiarity with various tools, including Typescript, React Router, framer motion, and the vitest unit testing framework.',
   stack: [
-    goodCodingIcons[5],
-    goodCodingIcons[8],
-    averageCodingIcons[7],
-    averageCodingIcons[5],
+    goodCodingIcons.ts,
+    goodCodingIcons.react,
+    averageCodingIcons.framer,
+    averageCodingIcons.vite,
   ],
   links: [
     {

@@ -12,7 +12,7 @@ import {
   averageCodingIcons,
   averageDesignIcons,
 } from '@/constants/skill-icons';
-import { Tanimation } from '@/constants/typeInterface';
+import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { useThemeContext } from '@/hooks/useThemeContext';

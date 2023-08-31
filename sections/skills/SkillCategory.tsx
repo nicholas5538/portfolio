@@ -1,11 +1,7 @@
 import React from 'react';
 import { m } from 'framer-motion';
 import Tooltip from '@/components/Tooltip';
-import {
-  averageDesignIcons,
-  goodDesignIcons,
-  type TIcons,
-} from '@/constants/skill-icons';
+import type { TIcons } from '@/constants/skill-icons';
 import type { Tvariants } from '@/constants/typeInterface';
 
 const SkillCategory = ({
@@ -15,7 +11,7 @@ const SkillCategory = ({
   childAnimation,
 }: TIcons & Tvariants) => {
   const tooltipSide =
-    icons === goodDesignIcons || icons === averageDesignIcons ? 'right' : 'top';
+    Object.hasOwn(icons, 'ps') || Object.hasOwn(icons, 'figma') ? 'right' : 'top';
 
   return (
     <>
@@ -26,7 +22,7 @@ const SkillCategory = ({
         variants={containerAnimation}
         className="mb-2 flex flex-row flex-wrap gap-x-4 gap-y-4 ipad-mini:gap-y-0 lg:mb-4"
       >
-        {icons.map(({ Icon, tooltipText: tooltipText }) => {
+        {Object.values(icons).map(({ Icon, tooltipText: tooltipText }) => {
           return (
             <m.div variants={childAnimation} key={tooltipText}>
               <Tooltip side={tooltipSide} tooltipText={tooltipText}>
