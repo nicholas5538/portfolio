@@ -1,6 +1,6 @@
 'use client';
 
-import { childrenNode } from '@/constants/typeInterface';
+import type { childrenNode } from '@/constants/typeInterface';
 import { useReducedMotion } from 'framer-motion';
 import { createContext, useContext } from 'react';
 

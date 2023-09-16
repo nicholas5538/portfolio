@@ -11,8 +11,7 @@
       "extends": [
         "plugin:testing-library/react",
         "plugin:jest/recommended",
-        "plugin:jest/style",
-        "plugin:yml/standard"
+        "plugin:jest/style"
       ],
       "rules": {
         "testing-library/await-async-queries": "error",

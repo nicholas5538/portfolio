@@ -11,7 +11,9 @@ const SkillCategory = ({
   childAnimation,
 }: TIcons & Tvariants) => {
   const tooltipSide =
-    Object.hasOwn(icons, 'ps') || Object.hasOwn(icons, 'figma') ? 'right' : 'top';
+    Object.hasOwn(icons, 'ps') || Object.hasOwn(icons, 'figma')
+      ? 'right'
+      : 'top';
 
   return (
     <>

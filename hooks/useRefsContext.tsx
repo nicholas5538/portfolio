@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useRef, type RefObject } from 'react';
-import { childrenNode } from '@/constants/typeInterface';
+import type { childrenNode } from '@/constants/typeInterface';
 
 type TrefElements = {
   aboutMeRef: RefObject<HTMLHeadingElement>;
