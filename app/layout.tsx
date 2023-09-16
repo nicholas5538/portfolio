@@ -1,4 +1,7 @@
 import { Montserrat } from 'next/font/google';
+import MotionProvider from '@/hooks/useMotionContext';
+import RefsProvider from '@/hooks/useRefsContext';
+import ThemeProvider from '@/hooks/useThemeContext';
 import type { Metadata } from 'next';
 import type { childrenNode } from '@/constants/typeInterface';
 import './globals.css';
@@ -13,7 +16,7 @@ const monserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Nicholas Yong',
   description:
-    'Hi, I\'m Nicholas and I love to build simple and beautiful things!',
+    "Hi, I'm Nicholas and I love to build simple and beautiful things!",
   creator: 'Nicholas Yong',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#f8f8f8' },
@@ -53,7 +56,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: childrenNode) {
   return (
     <html lang="en" className={monserrat.className}>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          <MotionProvider>
+            <RefsProvider>{children}</RefsProvider>
+          </MotionProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
