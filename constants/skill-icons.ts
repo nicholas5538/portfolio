@@ -25,7 +25,11 @@ import { FaNodeJs } from 'react-icons/fa6';
 
 export type TIcons = {
   heading: string;
-  icons: typeof goodCodingIcons | typeof goodDesignIcons | typeof averageCodingIcons | typeof averageDesignIcons;
+  icons:
+    | typeof goodCodingIcons
+    | typeof goodDesignIcons
+    | typeof averageCodingIcons
+    | typeof averageDesignIcons;
 };
 
 export const goodCodingIcons = {
@@ -92,5 +96,5 @@ export const averageCodingIcons = {
 };
 
 export const averageDesignIcons = {
-  figma: { Icon: SiFigma, tooltipText: 'Figma' }
+  figma: { Icon: SiFigma, tooltipText: 'Figma' },
 };

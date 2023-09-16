@@ -8,7 +8,7 @@ import { useThemeContext } from '@/hooks/useThemeContext';
 import AboutMeLight from '../../public/animations/aboutme-light.json';
 import AboutMeDark from '../../public/animations/aboutme-dark.json';
 import { m } from 'framer-motion';
-import { Tanimation } from '@/constants/typeInterface';
+import type { Tanimation } from '@/constants/typeInterface';
 import Animation from '../../components/Animation';
 
 const Lottie = lazy(() => import('lottie-light-react'));
