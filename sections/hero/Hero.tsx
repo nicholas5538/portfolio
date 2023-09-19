@@ -9,7 +9,7 @@ import profilePic from '../../public/images/profile-light.webp';
 import Button from '@/components/button';
 import Tooltip from '@/components/Tooltip';
 import { externalLinks } from '@/constants/global';
-import { Tanimation, Tbutton } from '@/constants/typeInterface';
+import type { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { Provider } from '@radix-ui/react-tooltip';
 

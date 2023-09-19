@@ -14,7 +14,7 @@ it('should render hero section components', () => {
   render(<Hero />);
 
   const link = screen.getByTestId('Linkedin');
-  expect(link).toHaveAttribute('stroke', 'currentColor');
+  expect(link).toHaveAttribute('fill', 'currentColor');
 
   expect(
     screen.getByRole('img', { name: /profile picture/i })

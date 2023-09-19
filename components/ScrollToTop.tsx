@@ -2,10 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion';
-import { SlArrowUpCircle } from 'react-icons/sl';
 import { scrollTo } from 'seamless-scroll-polyfill';
 import Tooltip from '@/components/Tooltip';
-import { Tanimation } from '@/constants/typeInterface';
+import type { Tanimation } from '@/constants/typeInterface';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { Provider } from '@radix-ui/react-tooltip';
 
@@ -53,9 +54,9 @@ const ScrollToTop = () => {
             <Provider delayDuration={400}>
               <Tooltip side="left" tooltipText="Click to scroll to the top">
                 <i className="fixed top-[90%] z-50 ml-[85%] cursor-pointer md:ml-[94%]">
-                  <SlArrowUpCircle
-                    size={40}
-                    className="text-blue-gradient-2 dark:text-orange"
+                  <FontAwesomeIcon
+                    icon={faCircleArrowUp}
+                    className="h-10 w-10 text-blue-gradient-2 dark:text-orange"
                   />
                 </i>
               </Tooltip>

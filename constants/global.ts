@@ -1,6 +1,10 @@
 import { RefObject } from 'react';
-import { SiLinkedin, SiGithub, SiInstagram } from 'react-icons/si';
-import { Tlinks } from './typeInterface';
+import {
+  SiLinkedin,
+  SiGithub,
+  SiInstagram,
+} from '@icons-pack/react-simple-icons';
+import type { Tlinks } from './typeInterface';
 import { scrollIntoView } from 'seamless-scroll-polyfill';
 
 export const listElements = [

@@ -1,6 +1,11 @@
 import { goodCodingIcons, averageCodingIcons } from '@/constants/skill-icons';
-import { SiArduino, SiGithub, SiJupyter, SiYoutube } from 'react-icons/si';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import {
+  SiArduino,
+  SiGithub,
+  SiJupyter,
+  SiWebauthn,
+  SiYoutube,
+} from '@icons-pack/react-simple-icons';
 
 import type { StaticImageData } from 'next/image';
 import handSanitizerImage from '../../public/images/handsanitizer.webp';
@@ -48,7 +53,7 @@ const voucherManagementCard: Tproject = {
       url: 'https://github.com/nicholas5538/fp-voucher-FE',
     },
     {
-      Icon: FaExternalLinkAlt,
+      Icon: SiWebauthn,
       tooltipText: 'Website',
       url: 'https://fp-voucher-portal.onrender.com',
     },
