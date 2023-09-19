@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
-import { Tbutton } from '@/constants/typeInterface';
+import type { Tbutton } from '@/constants/typeInterface';
 
 const Button = ({
   buttonClass,

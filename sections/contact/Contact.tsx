@@ -3,7 +3,7 @@
 import React from 'react';
 import Animation from '@/components/Animation';
 import Button from '@/components/button';
-import { Tanimation, Tbutton } from '@/constants/typeInterface';
+import type { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 
