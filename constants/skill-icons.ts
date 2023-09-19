@@ -14,14 +14,14 @@ import {
   SiMongodb,
   SiMysql,
   SiNextdotjs,
+  SiNodedotjs,
   SiPostgresql,
   SiPython,
   SiReact,
   SiTailwindcss,
   SiTypescript,
   SiVite,
-} from 'react-icons/si';
-import { FaNodeJs } from 'react-icons/fa6';
+} from '@icons-pack/react-simple-icons';
 
 export type TIcons = {
   heading: string;
@@ -58,7 +58,7 @@ export const goodCodingIcons = {
     tooltipText: 'TypeScript',
   },
   node: {
-    Icon: FaNodeJs,
+    Icon: SiNodedotjs,
     tooltipText: 'node.js',
   },
   express: {

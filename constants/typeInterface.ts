@@ -1,4 +1,4 @@
-import type { IconType } from 'react-icons';
+import { SiLinkedin } from '@icons-pack/react-simple-icons';
 import type { Variants } from 'framer-motion';
 import type { ReactElement, ReactNode, Dispatch, SetStateAction } from 'react';
 
@@ -13,7 +13,7 @@ export type HamburgerProps = {
 
 export type Tlinks = {
   [key: string]: {
-    Icon: IconType;
+    Icon: typeof SiLinkedin;
     url: string;
   };
 };
