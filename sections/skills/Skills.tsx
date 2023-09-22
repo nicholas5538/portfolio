@@ -3,8 +3,8 @@
 import React, { lazy } from 'react';
 import { m } from 'framer-motion';
 import SkillCategory from './SkillCategory';
-import SkillsLight from '../../public/animations/skills-light.json';
-import SkillsDark from '../../public/animations/skills-dark.json';
+import SkillsLight from '@/animations/skills-light.json';
+import SkillsDark from '@/animations/skills-dark.json';
 import Animation from '@/components/Animation';
 import {
   goodCodingIcons,
