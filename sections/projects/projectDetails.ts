@@ -8,10 +8,10 @@ import {
 } from '@icons-pack/react-simple-icons';
 
 import type { StaticImageData } from 'next/image';
-import handSanitizerImage from '../../public/images/handsanitizer.webp';
-import pepsiImage from '../../public/images/pepsi-corporate.webp';
-import stockImage from '../../public/images/stocks-portfolio.webp';
-import voucherImage from '../../public/images/voucher_management.webp';
+import handSanitizerImage from '@/images/handsanitizer.webp';
+import pepsiImage from '@/images/pepsi-corporate.webp';
+import stockImage from '@/images/stocks-portfolio.webp';
+import voucherImage from '@/images/voucher_management.webp';
 
 export type Tproject = {
   id: number;

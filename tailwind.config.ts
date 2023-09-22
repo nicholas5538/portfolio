@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
-module.exports = {
+export default {
   darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -78,16 +78,16 @@ module.exports = {
           '40%': { transform: 'rotate(-4deg)' },
         },
         slideDownAndFade: {
-          '0%': { opacity: 0, transform: 'translateY(-2px)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' },
+          '0%': { opacity: '0', transform: 'translateY(-2px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         slideLeftAndFade: {
-          '0%': { opacity: 0, transform: 'translateX(2px)' },
-          '100%': { opacity: 1, transform: 'translateX(0)' },
+          '0%': { opacity: '0', transform: 'translateX(2px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         slideRightAndFade: {
-          '0%': { opacity: 0, transform: 'translateX(-2px)' },
-          '100%': { opacity: 1, transform: 'translateX(0)' },
+          '0%': { opacity: '0', transform: 'translateX(-2px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
         },
       },
       transitionProperty: {
@@ -106,4 +106,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+} satisfies Config;

@@ -8,8 +8,12 @@ import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 
 const Contact = () => {
-  const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
+    prefersReducedMotion: false,
+    windowWidth: 0,
+  };
   const { contactRef } = useRefsContext() ?? {};
+  const viewAmount = windowWidth <= 500 ? 0.35 : 0.65;
 
   const containerAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
@@ -39,7 +43,7 @@ const Contact = () => {
       <Animation
         animation={containerAnimation}
         className="relative mx-auto mb-20 flex h-full w-11/12 max-w-[450px] flex-col items-center justify-center gap-y-4 p-0 text-center ipad-mini:mb-28 md:mb-32 lg:mb-48 lg:gap-y-8 xl:mb-56 xl:max-w-[600px] 3xl:mb-72"
-        viewAmount={0.65}
+        viewAmount={viewAmount}
       >
         <h2
           ref={contactRef}

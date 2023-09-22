@@ -16,6 +16,8 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@/animations/*": ["./public/animations/*"],
+      "@/images/*": ["./public/images/*"],
       "@/*": ["./*"]
     },
     "plugins": [

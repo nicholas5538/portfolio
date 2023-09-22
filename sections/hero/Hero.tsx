@@ -5,16 +5,20 @@ import { clsx } from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import profilePic from '../../public/images/profile-light.webp';
 import Button from '@/components/button';
 import Tooltip from '@/components/Tooltip';
 import { externalLinks } from '@/constants/global';
 import type { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import profilePic from '@/images/profile-light.webp';
 import { Provider } from '@radix-ui/react-tooltip';
 
 const Hero = () => {
-  const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
+    prefersReducedMotion: false,
+    windowWidth: 0,
+  };
+  const viewAmount = windowWidth <= 500 ? 0.35 : 0.65;
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },
     show: {
@@ -66,7 +70,7 @@ const Hero = () => {
       variants={containerAnimation}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.65 }}
+      viewport={{ once: true, amount: viewAmount }}
       className="mx-auto mb-28 grid w-11/12 max-w-7xl grid-cols-1 pt-32 md:grid-cols-3 md:grid-rows-3 md:items-center md:justify-evenly md:gap-x-8 md:pt-60 lg:mb-60 xl:grid-cols-4"
     >
       <motion.aside
