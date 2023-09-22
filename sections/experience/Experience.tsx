@@ -2,19 +2,23 @@
 
 import React, { lazy } from 'react';
 import { clsx } from 'clsx';
-import Animation from '../../components/Animation';
 import { m } from 'framer-motion';
-import ExperienceLottie from '../../public/animations/experience.json';
 import JobPointers from './JobPointers';
-import { Tanimation } from '@/constants/typeInterface';
+import ExperienceLottie from '@/animations/experience.json';
+import Animation from '@/components/Animation';
+import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 
 const Lottie = lazy(() => import('lottie-light-react'));
 
 const Experience = () => {
-  const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
+    prefersReducedMotion: false,
+    windowWidth: 0,
+  };
   const { experienceRef } = useRefsContext() ?? {};
+  const viewAmount = windowWidth <= 500 ? 0.35 : 0.65;
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
@@ -48,7 +52,7 @@ const Experience = () => {
           'md:items-center md:justify-center md:gap-x-10 md:gap-y-0',
           'md:pt-0 lg:mb-[22rem] xl:mb-80 2xl:mb-[26rem] 3xl:mb-[22rem]'
         )}
-        viewAmount={0.65}
+        viewAmount={viewAmount}
       >
         <m.h2
           ref={experienceRef}

@@ -2,23 +2,26 @@
 
 import React, { lazy } from 'react';
 import Link from 'next/link';
+import AboutMeLight from '@/animations/aboutme-light.json';
+import AboutMeDark from '@/animations/aboutme-dark.json';
+import Animation from '@/components/Animation';
+import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
-import AboutMeLight from '../../public/animations/aboutme-light.json';
-import AboutMeDark from '../../public/animations/aboutme-dark.json';
 import { m } from 'framer-motion';
-import type { Tanimation } from '@/constants/typeInterface';
-import Animation from '../../components/Animation';
-
 const Lottie = lazy(() => import('lottie-light-react'));
 
 const AboutMe = () => {
-  const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
+    prefersReducedMotion: false,
+    windowWidth: 0,
+  };
   const { aboutMeRef } = useRefsContext() ?? {};
   const { darkMode } = useThemeContext() ?? false;
 
   const animationData = darkMode ? AboutMeDark : AboutMeLight;
+  const viewAmount = windowWidth <= 500 ? 0.35 : 0.7;
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
@@ -48,7 +51,7 @@ const AboutMe = () => {
       <Animation
         animation={containerAnimation}
         className="dark-blue-container md:mb-40 md:grid-rows-5 md:gap-y-4 lg:mb-52 2xl:mb-[15.5rem] 3xl:mb-[17rem]"
-        viewAmount={0.7}
+        viewAmount={viewAmount}
       >
         <m.div
           variants={childAnimation}
