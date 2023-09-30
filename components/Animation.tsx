@@ -3,7 +3,7 @@ import type { Tanimation } from '@/constants/typeInterface';
 import { LazyMotion, m } from 'framer-motion';
 
 const loadFeatures = () =>
-  import('../constants/features').then((res) => res.default);
+  import('@/constants/features').then((res) => res.default);
 
 type staggerProps = {
   className: string;
