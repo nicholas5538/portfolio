@@ -1,6 +1,6 @@
 import React from 'react';
 import { clsx } from 'clsx';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 import Link from 'next/link';
 import { scrollToRef } from '@/constants/global';
 import { listElements } from '@/constants/global';
@@ -64,7 +64,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   return (
     <AnimatePresence>
       {isMenuClicked && (
-        <motion.div
+        <m.div
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}
@@ -75,7 +75,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
           <ul className="rounded-xl bg-white-400 shadow-dropdown dark:bg-black-500 dark:shadow-none">
             {liElements}
           </ul>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

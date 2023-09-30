@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { HamburgerProps } from '@/constants/typeInterface';
 
 const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
@@ -47,19 +47,19 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
       className="h-full cursor-pointer"
       data-testid="hamburger-btn"
     >
-      <motion.li
+      <m.li
         animate={variant}
         variants={variantType.top}
         transition={transitionType}
         className="h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
-      <motion.li
+      <m.li
         animate={variant}
         variants={variantType.center}
         transition={transitionType}
         className="my-2 h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
-      <motion.li
+      <m.li
         animate={variant}
         variants={variantType.bottom}
         transition={transitionType}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Button from '@/components/button';
 import { listElements, scrollToRef } from '@/constants/global';
 import { Tbutton, Tvariants } from '@/constants/typeInterface';
@@ -20,7 +20,7 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
 
   const liElements = listElements.map((element, index) => {
     return (
-      <motion.li
+      <m.li
         variants={childAnimation}
         key={index.toString()}
         onClick={() =>
@@ -33,7 +33,7 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
         ) : (
           element
         )}
-      </motion.li>
+      </m.li>
     );
   });
 
