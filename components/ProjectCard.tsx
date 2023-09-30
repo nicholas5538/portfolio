@@ -1,11 +1,14 @@
 import React from 'react';
 import { clsx } from 'clsx';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { LazyMotion, m } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tooltip from '@/components/Tooltip';
 import type { Tanimation } from '@/constants/typeInterface';
 import type { Tproject } from '@/sections/projects/projectDetails';
+
+const loadFeatures = () =>
+  import('@/constants/features').then((res) => res.default);
 
 const ProjectCard = ({
   id,
@@ -47,7 +50,7 @@ const ProjectCard = ({
     ));
 
   return (
-    <LazyMotion features={domAnimation}>
+    <LazyMotion features={loadFeatures} strict>
       <m.ul
         variants={animation}
         initial="hidden"

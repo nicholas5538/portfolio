@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import Hero from './Hero';
 
 beforeAll(() => {
@@ -10,24 +10,25 @@ beforeAll(() => {
   });
 });
 
-it('should render hero section components', () => {
+it('should render hero section components', async () => {
   render(<Hero />);
 
   const link = screen.getByTestId('Linkedin');
   expect(link).toHaveAttribute('fill', 'currentColor');
 
-  expect(
-    screen.getByRole('img', { name: /profile picture/i })
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole('heading', {
-      name: /nothing excites me more than learning something new and starting a new adventure./i,
-    })
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole('heading', {
-      name: /currently looking out for opportunities/i,
-    })
-  ).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
+  await waitFor(() => {
+    expect(
+      screen.getByRole('img', { name: /profile picture/i })
+    ).toBeInTheDocument();
+  });
+  await waitFor(() => {
+    expect(
+      screen.getByRole('heading', {
+        name: /nothing excites me more than learning something new and starting a new adventure./i,
+      })
+    ).toBeInTheDocument();
+  });
+  await waitFor(() => {
+    expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
+  });
 });

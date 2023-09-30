@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { clsx } from 'clsx';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import Animation from '@/components/Animation';
 import Button from '@/components/button';
 import Tooltip from '@/components/Tooltip';
 import { externalLinks } from '@/constants/global';
@@ -62,14 +63,12 @@ const Hero = () => {
   };
 
   return (
-    <motion.div
-      variants={containerAnimation}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: viewAmount }}
+    <Animation
+      animation={containerAnimation}
+      viewAmount={viewAmount}
       className="mx-auto mb-28 grid w-11/12 max-w-7xl grid-cols-1 pt-32 md:grid-cols-3 md:grid-rows-3 md:items-center md:justify-evenly md:gap-x-8 md:pt-60 lg:mb-60 xl:grid-cols-4"
     >
-      <motion.aside
+      <m.aside
         variants={childAnimation}
         className={clsx(
           'z-10 mx-auto mb-8 h-72 w-48 overflow-hidden rounded-3xl shadow-dropdown dark:shadow-none',
@@ -84,8 +83,8 @@ const Hero = () => {
           priority
           className="z-20 transition-transform duration-300 ease-in-out hover:scale-110"
         />
-      </motion.aside>
-      <motion.h1
+      </m.aside>
+      <m.h1
         variants={childAnimation}
         className="mb-4 md:col-span-2 md:row-start-1 md:row-end-2 md:mb-0 md:text-4xl xl:text-5xl"
       >
@@ -102,15 +101,15 @@ const Hero = () => {
           Nicholas
         </span>
         , I love to design and code beautifully simple things.
-      </motion.h1>
-      <motion.h2
+      </m.h1>
+      <m.h2
         variants={childAnimation}
         className="mb-4 md:col-span-2 md:row-start-2 md:row-end-2 md:mb-0 md:text-2xl xl:text-3xl"
       >
         Nothing excites me more than learning something new and starting a new
         adventure.
-      </motion.h2>
-      <motion.div
+      </m.h2>
+      <m.div
         variants={childAnimation}
         className="md:col-span-2 md:row-start-3 md:row-end-4 xl:gap-y-10"
       >
@@ -121,8 +120,8 @@ const Hero = () => {
           <Provider delayDuration={400}>{anchorElements}</Provider>
           <Button {...ButtonProps} />
         </div>
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </Animation>
   );
 };
 
