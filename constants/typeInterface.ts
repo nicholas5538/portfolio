@@ -1,4 +1,3 @@
-import { SiLinkedin } from '@icons-pack/react-simple-icons';
 import type { Variants } from 'framer-motion';
 import type { ReactElement, ReactNode, Dispatch, SetStateAction } from 'react';
 
@@ -9,13 +8,6 @@ export type childrenNode = {
 export type HamburgerProps = {
   isMenuClicked: boolean;
   setMenuClicked: Dispatch<SetStateAction<boolean>>;
-};
-
-export type Tlinks = {
-  [key: string]: {
-    Icon: typeof SiLinkedin;
-    url: string;
-  };
 };
 
 export type Tvariants = {

@@ -40,16 +40,12 @@ const Hero = () => {
     },
   };
 
-  const anchorElements = Object.entries(externalLinks).map(
-    ([name, { Icon, url }]) => {
+  const anchorElements = Array.from(externalLinks).map(
+    ([key, { Icon, url }]) => {
       return (
-        <Tooltip key={name} side="top" tooltipText={name}>
-          <Link aria-label={name} href={url} rel="noreferrer" target="_blank">
-            <Icon
-              className="icon cursor-pointer"
-              size={30}
-              data-testid={name}
-            />
+        <Tooltip key={key} side="top" tooltipText={key}>
+          <Link aria-label={key} href={url} rel="noreferrer" target="_blank">
+            <Icon className="icon cursor-pointer" size={30} data-testid={key} />
           </Link>
         </Tooltip>
       );
