@@ -10,10 +10,7 @@ const SkillCategory = ({
   containerAnimation,
   childAnimation,
 }: TIcons & Tvariants) => {
-  const tooltipSide =
-    Object.hasOwn(icons, 'ps') || Object.hasOwn(icons, 'figma')
-      ? 'right'
-      : 'top';
+  const tooltipSide = icons.has('ps') || icons.has('figma') ? 'right' : 'top';
 
   return (
     <>
@@ -24,9 +21,9 @@ const SkillCategory = ({
         variants={containerAnimation}
         className="mb-2 flex flex-row flex-wrap gap-x-4 gap-y-4 ipad-mini:gap-y-0 lg:mb-4"
       >
-        {Object.values(icons).map(({ Icon, tooltipText: tooltipText }) => {
+        {Array.from(icons).map(([key, { Icon, tooltipText }]) => {
           return (
-            <m.div variants={childAnimation} key={tooltipText}>
+            <m.div variants={childAnimation} key={key}>
               <Tooltip side={tooltipSide} tooltipText={tooltipText}>
                 <i>
                   <Icon size={30} className="icon" />

@@ -37,14 +37,14 @@ const voucherManagementCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to carry out CRUD operations on vouchers. It also provides a data table for convenient access to all information related to the vouchers.',
   stack: [
-    goodCodingIcons.ts,
-    goodCodingIcons.node,
-    goodCodingIcons.express,
-    goodCodingIcons.react,
-    goodCodingIcons.tailwind,
-    averageCodingIcons.mongoDB,
-    averageCodingIcons.docker,
-    { ...averageCodingIcons.vite, tooltipText: 'Vite' },
+    goodCodingIcons.get('ts')!,
+    goodCodingIcons.get('node')!!,
+    goodCodingIcons.get('express')!,
+    goodCodingIcons.get('react')!,
+    goodCodingIcons.get('tailwind')!,
+    averageCodingIcons.get('mongoDB')!,
+    averageCodingIcons.get('docker')!,
+    { ...averageCodingIcons.get('vite')!, tooltipText: 'Vite' },
   ],
   links: [
     {
@@ -67,13 +67,13 @@ const stockProjectCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to quickly analyze the performance of their stock portfolio. It also allows users to save and make changes to their transaction history, which can be easily accessed on a single page.',
   stack: [
-    goodCodingIcons.python,
-    goodCodingIcons.django,
-    goodCodingIcons.html,
-    goodCodingIcons.css,
-    goodCodingIcons.js,
-    goodCodingIcons.bootstrap,
-    averageCodingIcons.postgreSQL,
+    goodCodingIcons.get('python')!,
+    goodCodingIcons.get('django')!,
+    goodCodingIcons.get('html')!,
+    goodCodingIcons.get('css')!,
+    goodCodingIcons.get('js')!,
+    goodCodingIcons.get('bootstrap')!,
+    averageCodingIcons.get('postgreSQL')!,
   ],
   links: [
     {
@@ -96,7 +96,7 @@ const ioTProjectCard: Tproject = {
   projectDesc:
     'A hand sanitizer product that incorporates data analytics and simple machine learning techniques to forecast certain data points, such as the number of times the sanitizer dispenser needs to be used before it runs out.',
   stack: [
-    goodCodingIcons.python,
+    goodCodingIcons.get('python')!,
     { Icon: SiJupyter, tooltipText: 'Jupyter Notebook' },
     { Icon: SiArduino, tooltipText: 'Arduino' },
   ],
@@ -121,10 +121,10 @@ const pepsiProjectCard: Tproject = {
   projectDesc:
     'Creating a new React-based single-page application from the beginning, in order to gain familiarity with various tools, including Typescript, React Router, framer motion, and the vitest unit testing framework.',
   stack: [
-    goodCodingIcons.ts,
-    goodCodingIcons.react,
-    averageCodingIcons.framer,
-    averageCodingIcons.vite,
+    goodCodingIcons.get('ts')!,
+    goodCodingIcons.get('react')!,
+    averageCodingIcons.get('framer')!,
+    averageCodingIcons.get('vite')!,
   ],
   links: [
     {

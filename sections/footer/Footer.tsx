@@ -3,21 +3,19 @@ import Link from 'next/link';
 import { externalLinks } from '@/constants/global';
 
 const Footer = () => {
-  const footerIcons = Object.entries(externalLinks).map(
-    ([name, { Icon, url }]) => {
-      return (
-        <Link
-          aria-label={name}
-          key={name}
-          href={url}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <Icon size={30} className="icon cursor-pointer" />
-        </Link>
-      );
-    }
-  );
+  const footerIcons = Array.from(externalLinks).map(([key, { Icon, url }]) => {
+    return (
+      <Link
+        aria-label={key}
+        key={key}
+        href={url}
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Icon size={30} className="icon cursor-pointer" />
+      </Link>
+    );
+  });
 
   return (
     <footer>
