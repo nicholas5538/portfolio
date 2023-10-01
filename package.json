@@ -33,7 +33,7 @@
     "sharp": "0.32.6"
   },
   "devDependencies": {
-    "@eslint/js": "8.49.0",
+    "@eslint/js": "8.50.0",
     "@next/bundle-analyzer": "13.5.2",
     "@testing-library/dom": "9.3.3",
     "@testing-library/jest-dom": "6.1.3",
