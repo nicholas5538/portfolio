@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import Image from 'next/image';
-import errorPic from '../public/images/error.webp';
 import Skeleton from '@/components/Skeleton';
 import { Tbutton } from '@/constants/typeInterface';
+import errorPic from '@/images/error.webp';
 
 const Button = lazy(() => import('@/components/button'));
 const Card = lazy(() =>
