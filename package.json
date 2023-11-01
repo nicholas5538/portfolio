@@ -46,7 +46,7 @@
     "autoprefixer": "10.4.16",
     "cross-env": "7.0.3",
     "cssnano": "6.0.1",
-    "eslint": "8.49.0",
+    "eslint": "8.52.0",
     "eslint-config-next": "13.5.2",
     "eslint-plugin-jest": "27.4.0",
     "eslint-plugin-testing-library": "6.0.1",
