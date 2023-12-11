@@ -1,6 +1,6 @@
-FROM node:18-alpine3.18 AS base
+FROM node:20-alpine3.18 AS base
 LABEL authors="nicholas5538"
-LABEL version="1.0"
+LABEL version="2.0"
 
 RUN apk add --no-cache libc6-compat
 RUN yarn global add pnpm

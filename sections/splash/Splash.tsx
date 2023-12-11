@@ -1,13 +1,13 @@
 'use client';
 
 import { AnimatePresence, LazyMotion, m } from 'framer-motion';
-import React, { lazy, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { DotLottiePlayer } from '@dotlottie/react-player';
 import LoadingAnimation from '@/animations/loading.json';
 import type { childrenNode, Tanimation } from '@/constants/typeInterface';
 
 const loadFeatures = () =>
   import('@/constants/features').then((res) => res.default);
-const Lottie = lazy(() => import('lottie-light-react'));
 
 const Splash = ({ children }: childrenNode) => {
   const [loading, setLoading] = useState(true);
@@ -40,9 +40,10 @@ const Splash = ({ children }: childrenNode) => {
               exit="hidden"
               className="grid h-screen w-screen place-items-center bg-white-400 dark:bg-black-300"
             >
-              <Lottie
-                animationData={LoadingAnimation}
+              <DotLottiePlayer
+                autoplay={true}
                 className="max-h-[300px] max-w-[300px]"
+                src={LoadingAnimation}
               />
             </m.div>
           </AnimatePresence>
