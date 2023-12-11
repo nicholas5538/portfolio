@@ -70,8 +70,8 @@ const Experience = () => {
           )}
         >
           <DotLottiePlayer
-              autoplay={true}
-              loop={!prefersReducedMotion}
+            autoplay={true}
+            loop={!prefersReducedMotion}
             src={ExperienceLottie}
           />
         </m.aside>
