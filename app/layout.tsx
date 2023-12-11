@@ -18,10 +18,6 @@ export const metadata: Metadata = {
   description:
     "Hi, I'm Nicholas and I love to build simple and beautiful things!",
   creator: 'Nicholas Yong',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f8f8f8' },
-    { media: '(prefers-color-scheme: dark)', color: '#212529' },
-  ],
   icons: {
     icon: '/favicons/favicon.ico',
     apple: '/favicons/apple-touch-icon.png',
