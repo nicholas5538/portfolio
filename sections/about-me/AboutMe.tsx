@@ -1,7 +1,8 @@
 'use client';
 
-import React, { lazy } from 'react';
+import React from 'react';
 import Link from 'next/link';
+import { DotLottiePlayer } from '@dotlottie/react-player';
 import AboutMeLight from '@/animations/aboutme-light.json';
 import AboutMeDark from '@/animations/aboutme-dark.json';
 import Animation from '@/components/Animation';
@@ -10,7 +11,6 @@ import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
 import { m } from 'framer-motion';
-const Lottie = lazy(() => import('lottie-light-react'));
 
 const AboutMe = () => {
   const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
@@ -99,9 +99,10 @@ const AboutMe = () => {
           .
         </m.h3>
         <m.aside variants={lottieAnimation} className="about-me-animation">
-          <Lottie
-            animationData={animationData}
-            loop={prefersReducedMotion ? 1 : true}
+          <DotLottiePlayer
+            autoplay={true}
+            loop={!prefersReducedMotion}
+            src={animationData}
           />
         </m.aside>
       </Animation>

@@ -1,16 +1,15 @@
 'use client';
 
-import React, { lazy } from 'react';
+import React from 'react';
 import { clsx } from 'clsx';
 import { m } from 'framer-motion';
 import JobPointers from './JobPointers';
+import { DotLottiePlayer } from '@dotlottie/react-player';
 import ExperienceLottie from '@/animations/experience.json';
 import Animation from '@/components/Animation';
 import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
-
-const Lottie = lazy(() => import('lottie-light-react'));
 
 const Experience = () => {
   const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
@@ -70,9 +69,10 @@ const Experience = () => {
             'lg:place-self-center xl:h-[18rem] xl:w-[18rem]'
           )}
         >
-          <Lottie
-            animationData={ExperienceLottie}
-            loop={prefersReducedMotion ? 1 : true}
+          <DotLottiePlayer
+              autoplay={true}
+              loop={!prefersReducedMotion}
+            src={ExperienceLottie}
           />
         </m.aside>
       </Animation>
