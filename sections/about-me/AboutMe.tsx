@@ -17,7 +17,7 @@ const AboutMe = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const { aboutMeRef } = useRefsContext() ?? {};
   const { darkMode } = useThemeContext() ?? false;
-  const { viewAmount } = useViewContext();
+  const { viewAmount } = useViewContext() ?? 0.65;
   const animationData = darkMode ? AboutMeDark : AboutMeLight;
 
   const childAnimation: Tanimation = {

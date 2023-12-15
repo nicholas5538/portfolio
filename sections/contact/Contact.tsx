@@ -11,7 +11,7 @@ import { useViewContext } from '@/hooks/useViewContext';
 const Contact = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const { contactRef } = useRefsContext() ?? {};
-  const { viewAmount } = useViewContext();
+  const { viewAmount } = useViewContext() ?? 0.65;
 
   const containerAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },

@@ -17,7 +17,7 @@ import { Provider } from '@radix-ui/react-tooltip';
 
 const Hero = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
-  const { viewAmount } = useViewContext();
+  const { viewAmount } = useViewContext() ?? 0.65;
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },
     show: {

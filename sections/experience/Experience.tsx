@@ -15,7 +15,7 @@ import { useViewContext } from '@/hooks/useViewContext';
 const Experience = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const { experienceRef } = useRefsContext() ?? {};
-  const { viewAmount } = useViewContext();
+  const { viewAmount } = useViewContext() ?? 0.65;
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
