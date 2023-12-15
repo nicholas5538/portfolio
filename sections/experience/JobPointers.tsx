@@ -10,8 +10,9 @@ const JobPointers = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
       <m.div
         key={experience.company}
         variants={childAnimation}
-        className={clsx('mb-5 md:col-span-2 md:row-start-4 md:row-end-6', {
+        className={clsx('mb-5 md:col-span-2', {
           'md:row-start-2 md:row-end-4': index === 0,
+          'md:row-start-4 md:row-end-6': index !== 0,
         })}
       >
         <h3 className="mb-2 border-l-2 border-l-blue pl-4 font-semibold text-white-400 transition-colors duration-300 ease-out dark:border-l-orange-red dark:text-white-300 md:text-xl lg:text-2xl xl:text-3xl">
