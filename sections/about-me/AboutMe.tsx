@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { DotLottiePlayer } from '@dotlottie/react-player';
 import AboutMeLight from '@/animations/aboutme-light.json';
@@ -10,18 +11,14 @@ import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
-import { m } from 'framer-motion';
+import { useViewContext } from '@/hooks/useViewContext';
 
 const AboutMe = () => {
-  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
-    prefersReducedMotion: false,
-    windowWidth: 0,
-  };
+  const { prefersReducedMotion } = useMotionContext() ?? false;
   const { aboutMeRef } = useRefsContext() ?? {};
   const { darkMode } = useThemeContext() ?? false;
-
+  const { viewAmount } = useViewContext() ?? 0.65;
   const animationData = darkMode ? AboutMeDark : AboutMeLight;
-  const viewAmount = windowWidth <= 500 ? 0.35 : 0.7;
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },

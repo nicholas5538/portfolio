@@ -11,15 +11,13 @@ import Tooltip from '@/components/Tooltip';
 import { externalLinks } from '@/constants/global';
 import type { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import { useViewContext } from '@/hooks/useViewContext';
 import profilePic from '@/images/profile-light.webp';
 import { Provider } from '@radix-ui/react-tooltip';
 
 const Hero = () => {
-  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
-    prefersReducedMotion: false,
-    windowWidth: 0,
-  };
-  const viewAmount = windowWidth <= 500 ? 0.35 : 0.65;
+  const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { viewAmount } = useViewContext() ?? 0.65;
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },
     show: {
