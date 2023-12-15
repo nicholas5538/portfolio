@@ -2,6 +2,7 @@ import { Montserrat } from 'next/font/google';
 import MotionProvider from '@/hooks/useMotionContext';
 import RefsProvider from '@/hooks/useRefsContext';
 import ThemeProvider from '@/hooks/useThemeContext';
+import ViewProvider from '@/hooks/useViewContext';
 import type { Metadata } from 'next';
 import type { childrenNode } from '@/constants/typeInterface';
 import './globals.css';
@@ -55,7 +56,9 @@ export default function RootLayout({ children }: childrenNode) {
       <body>
         <ThemeProvider>
           <MotionProvider>
-            <RefsProvider>{children}</RefsProvider>
+            <RefsProvider>
+              <ViewProvider>{children}</ViewProvider>
+            </RefsProvider>
           </MotionProvider>
         </ThemeProvider>
       </body>
