@@ -6,14 +6,12 @@ import Button from '@/components/button';
 import type { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
+import { useViewContext } from '@/hooks/useViewContext';
 
 const Contact = () => {
-  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
-    prefersReducedMotion: false,
-    windowWidth: 0,
-  };
+  const { prefersReducedMotion } = useMotionContext() ?? false;
   const { contactRef } = useRefsContext() ?? {};
-  const viewAmount = windowWidth <= 500 ? 0.35 : 0.65;
+  const { viewAmount } = useViewContext();
 
   const containerAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },

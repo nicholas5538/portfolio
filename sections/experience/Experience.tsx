@@ -10,14 +10,12 @@ import Animation from '@/components/Animation';
 import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
+import { useViewContext } from '@/hooks/useViewContext';
 
 const Experience = () => {
-  const { prefersReducedMotion, windowWidth } = useMotionContext() ?? {
-    prefersReducedMotion: false,
-    windowWidth: 0,
-  };
+  const { prefersReducedMotion } = useMotionContext() ?? false;
   const { experienceRef } = useRefsContext() ?? {};
-  const viewAmount = windowWidth <= 500 ? 0.35 : 0.65;
+  const { viewAmount } = useViewContext();
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
