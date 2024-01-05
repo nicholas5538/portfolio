@@ -12,7 +12,7 @@ import { externalLinks } from '@/constants/global';
 import type { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useViewContext } from '@/hooks/useViewContext';
-import profilePic from '@/images/profile-light.webp';
+import profilePic from '@/images/profile.webp';
 import { Provider } from '@radix-ui/react-tooltip';
 
 const Hero = () => {
