@@ -17,6 +17,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
+  SiPrisma,
   SiPython,
   SiReact,
   SiTailwindcss,
@@ -86,6 +87,13 @@ export const goodCodingIcons = new Map([
       tooltipText: 'Express.js',
     },
   ],
+    [
+        'prisma',
+      {
+        Icon: SiPrisma,
+        tooltipText: 'Prisma ORM'
+      }
+    ],
   [
     'react',
     {
