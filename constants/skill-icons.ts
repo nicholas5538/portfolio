@@ -87,13 +87,13 @@ export const goodCodingIcons = new Map([
       tooltipText: 'Express.js',
     },
   ],
-    [
-        'prisma',
-      {
-        Icon: SiPrisma,
-        tooltipText: 'Prisma ORM'
-      }
-    ],
+  [
+    'prisma',
+    {
+      Icon: SiPrisma,
+      tooltipText: 'Prisma ORM',
+    },
+  ],
   [
     'react',
     {
