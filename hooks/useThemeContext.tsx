@@ -18,31 +18,47 @@ type TthemeContext = {
 
 const ThemeContext = createContext(null as unknown as TthemeContext);
 
-export const useThemeContext = () => useContext(ThemeContext);
+export const useThemeContext = () => {
+  return useContext(ThemeContext);
+};
 
 const ThemeProvider = ({ children }: childrenNode) => {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => initialThemeHandler());
+
+  const isLocalStorageEmpty = (): boolean => {
+    return !localStorage.getItem('darkMode');
+  };
+
   const initialThemeHandler = (): void => {
-    if (localStorage.getItem('darkMode')) {
-      const darkMode: boolean = JSON.parse(localStorage.getItem('darkMode')!);
-      darkMode && document.documentElement.classList.add('dark');
-      setDarkMode(darkMode);
-    } else {
+    if (isLocalStorageEmpty()) {
       localStorage.setItem('darkMode', 'true');
       document.documentElement.classList.add('dark');
       setDarkMode(true);
+    } else {
+      const darkMode: boolean = JSON.parse(localStorage.getItem('darkMode')!);
+      darkMode && document.documentElement.classList.add('dark');
+      setDarkMode(() => {
+        return darkMode;
+      });
     }
   };
-
-  useEffect(() => initialThemeHandler(), []);
 
   const toggleThemeHandler = () => {
     const darkMode: boolean = JSON.parse(localStorage.getItem('darkMode')!);
     setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('darkMode', `${!darkMode}`);
+    toggleDarkClassToBody();
+    setValueToLocalStorage();
     return darkMode;
+  };
+
+  const toggleDarkClassToBody = () => {
+    document.documentElement.classList.toggle('dark');
+  };
+
+  const setValueToLocalStorage = () => {
+    localStorage.setItem('darkMode', `${!darkMode}`);
   };
 
   return (
