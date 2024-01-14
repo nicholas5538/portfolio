@@ -1,16 +1,21 @@
-import { useEffect, type RefObject } from 'react';
+import {
+  useEffect,
+  type RefObject,
+  type Dispatch,
+  type SetStateAction,
+} from 'react';
 
-export const useOutsideAlerter = (
+export default function useOutsideAlerter(
   ref: RefObject<HTMLDivElement>,
-  handleClick: () => void
-) => {
+  handleClick: Dispatch<SetStateAction<boolean>>
+) {
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent | TouchEvent): void => {
+    function handleClickOutside(e: MouseEvent | TouchEvent): void {
       if (ref.current && !ref.current.contains(e.target as HTMLElement)) {
-        handleClick();
+        handleClick(false);
       }
       return;
-    };
+    }
 
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
@@ -22,4 +27,4 @@ export const useOutsideAlerter = (
   }, [ref, handleClick]);
 
   return;
-};
+}
