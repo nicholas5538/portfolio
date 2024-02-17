@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useScrollDirection = () => {
-  const [scrollDirection, setScrollDirection] = useState<string | null>(
-    null,
-  );
+  const [scrollDirection, setScrollDirection] = useState<string | null>(null);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;

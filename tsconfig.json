@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,15 +16,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/animations/*": [
-        "./public/animations/*"
-      ],
-      "@/images/*": [
-        "./public/images/*"
-      ],
-      "@/*": [
-        "./*"
-      ]
+      "@/animations/*": ["./public/animations/*"],
+      "@/images/*": ["./public/images/*"],
+      "@/*": ["./*"]
     },
     "plugins": [
       {
@@ -43,7 +33,5 @@
     ".next/types/**/*.ts",
     "./jest.setup.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

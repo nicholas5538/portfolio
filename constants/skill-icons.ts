@@ -20,6 +20,7 @@ import {
   SiPrisma,
   SiPython,
   SiReact,
+  SiSpringboot,
   SiTailwindcss,
   SiTypescript,
   SiVite,
@@ -124,8 +125,9 @@ export const goodDesignIcons = new Map([
 
 export const averageCodingIcons = new Map([
   ['next', { Icon: SiNextdotjs, tooltipText: 'Next.js' }],
-  ['mongoDB', { Icon: SiMongodb, tooltipText: 'MongoDB' }],
+  ['spring', { Icon: SiSpringboot, tooltipText: 'Spring Boot' }],
   ['docker', { Icon: SiDocker, tooltipText: 'Docker' }],
+  ['mongoDB', { Icon: SiMongodb, tooltipText: 'MongoDB' }],
   ['mySQL', { Icon: SiMysql, tooltipText: 'MySQL' }],
   ['postgreSQL', { Icon: SiPostgresql, tooltipText: 'PostgreSQL' }],
   ['framer', { Icon: SiFramer, tooltipText: 'Framer Motion' }],
