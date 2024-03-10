@@ -11,7 +11,7 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
   const refsArray = Object.values(useRefsContext() ?? {});
   const ButtonProps: Tbutton<string> = {
     label: 'Resume PDF',
-    link: 'https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1qAhqlPGqBdURD958C8yNdTVteQZKCQBJ/view?usp=sharing',
     linkClass: 'xl:text-xl',
     rel: 'noreferrer noopener',
     target: '_blank',

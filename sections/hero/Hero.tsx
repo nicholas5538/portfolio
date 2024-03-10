@@ -53,7 +53,7 @@ const Hero = () => {
 
   const ButtonProps: Tbutton<string> = {
     label: 'Resume PDF',
-    link: 'https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1qAhqlPGqBdURD958C8yNdTVteQZKCQBJ/view?usp=sharing',
     linkClass: 'md:text-2xl',
     rel: 'noreferrer noopener',
     target: '_blank',
