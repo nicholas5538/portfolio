@@ -11,6 +11,14 @@ import {
 } from '@icons-pack/react-simple-icons';
 import { scrollIntoView } from 'seamless-scroll-polyfill';
 
+export const resumeButtonProps = {
+  label: 'Resume PDF',
+  link: 'https://drive.google.com/file/d/1qAhqlPGqBdURD958C8yNdTVteQZKCQBJ/view?usp=sharing',
+  rel: 'noreferrer noopener',
+  target: '_blank',
+  text: 'Resume',
+};
+
 export const listElements = [
   'About Me',
   'Skills',

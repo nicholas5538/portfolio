@@ -1,22 +1,18 @@
 import React from 'react';
 import { m } from 'framer-motion';
 import Button from '@/components/button';
-import { listElements, scrollToRef } from '@/constants/global';
-import { Tbutton, Tvariants } from '@/constants/typeInterface';
+import {
+  resumeButtonProps,
+  listElements,
+  scrollToRef,
+} from '@/constants/global';
+import type { Tvariants } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 
 const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const refsArray = Object.values(useRefsContext() ?? {});
-  const ButtonProps: Tbutton<string> = {
-    label: 'Resume PDF',
-    link: 'https://drive.google.com/file/d/1qAhqlPGqBdURD958C8yNdTVteQZKCQBJ/view?usp=sharing',
-    linkClass: 'xl:text-xl',
-    rel: 'noreferrer noopener',
-    target: '_blank',
-    text: 'Resume',
-  };
 
   const liElements = listElements.map((element, index) => {
     return (
@@ -29,7 +25,7 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
         className="navbar-text cursor-pointer hover:underline hover:decoration-white-400 hover:decoration-2 hover:underline-offset-8"
       >
         {index === listElements.length - 1 ? (
-          <Button {...ButtonProps} />
+          <Button linkClass="xl:text-xl" {...resumeButtonProps} />
         ) : (
           element
         )}

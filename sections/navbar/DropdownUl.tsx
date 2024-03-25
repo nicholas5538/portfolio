@@ -2,7 +2,7 @@ import React from 'react';
 import { clsx } from 'clsx';
 import { AnimatePresence, m } from 'framer-motion';
 import Link from 'next/link';
-import { scrollToRef } from '@/constants/global';
+import { resumeButtonProps, scrollToRef } from '@/constants/global';
 import { listElements } from '@/constants/global';
 import type { HamburgerProps } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
@@ -41,10 +41,10 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
       >
         {index === lastElement ? (
           <Link
-            aria-label="resume pdf"
-            href="https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing"
-            rel="noreferrer"
-            target="_blank"
+            aria-label={resumeButtonProps.label}
+            href={resumeButtonProps.link}
+            rel={resumeButtonProps.rel}
+            target={resumeButtonProps.target}
             className={clsx(
               'redirect-button block h-full w-full rounded-b-xl rounded-t-none bg-aqua',
               'py-2.5 pl-4 font-bold text-white-400 transition-colors duration-300 ease-out',
@@ -52,7 +52,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
               'dark:bg-light-orange dark:text-black-300 dark:hover:bg-orange-red'
             )}
           >
-            {element}
+            {resumeButtonProps.text}
           </Link>
         ) : (
           element

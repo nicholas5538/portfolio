@@ -8,8 +8,8 @@ import Link from 'next/link';
 import Animation from '@/components/Animation';
 import Button from '@/components/button';
 import Tooltip from '@/components/Tooltip';
-import { externalLinks } from '@/constants/global';
-import type { Tanimation, Tbutton } from '@/constants/typeInterface';
+import { resumeButtonProps, externalLinks } from '@/constants/global';
+import type { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useViewContext } from '@/hooks/useViewContext';
 import profilePic from '@/images/profile.webp';
@@ -50,15 +50,6 @@ const Hero = () => {
       );
     }
   );
-
-  const ButtonProps: Tbutton<string> = {
-    label: 'Resume PDF',
-    link: 'https://drive.google.com/file/d/1qAhqlPGqBdURD958C8yNdTVteQZKCQBJ/view?usp=sharing',
-    linkClass: 'md:text-2xl',
-    rel: 'noreferrer noopener',
-    target: '_blank',
-    text: 'Resume',
-  };
 
   return (
     <Animation
@@ -116,7 +107,7 @@ const Hero = () => {
         </h2>
         <div className="flex flex-row items-center justify-start gap-x-6">
           <Provider delayDuration={400}>{anchorElements}</Provider>
-          <Button {...ButtonProps} />
+          <Button linkClass="md:text-2xl" {...resumeButtonProps} />
         </div>
       </m.div>
     </Animation>
