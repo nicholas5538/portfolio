@@ -1,8 +1,16 @@
-# [My Portfolio site](https://nicholasyong.dev 'My portfolio page')
+# [My Portfolio site](https://portfolio-eight-beta-97.vercel.app/ 'My portfolio page')
 
 ![Next.JS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
 [![Node Version](https://img.shields.io/badge/Node-18.14.1-brightgreen.svg)](https://github.com/nicholas5538/portfolio/blob/main/.nvmrc)
+
+This `Next.js` project is currently not maintain anymore. I have migrated from `Next.js` to `Nuxt.js` for the purpose of learning `Vue.js` and using SSR with `Nuxt.js`. However, you could still access the production version of both `Next.js` and `Nuxt.js` portfolio webpage.
+
+[Next.js version](https://portfolio-eight-beta-97.vercel.app/ 'Next.js portfolio page')
+
+[Nuxt.js version](https://www.nicholasyong.dev/ 'Nuxt.js portfolio page')
+
+**`Nuxt.js` repo is required to be private because of AWS Amplify Hosting pull request preview settings**
 
 ## 💪 Objective
 
